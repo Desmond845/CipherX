@@ -1,3 +1,4 @@
+alert(`Welcome to CipherX/nThis site is still under development so you might experience some bugs do well to report it/nThank you`);
 const copy = document.getElementById("cpybtn");
 const inputfield = document.getElementById("text");
 const tomorse = document.getElementById("tomorse");

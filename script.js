@@ -1372,7 +1372,7 @@ function shareTranslation() {
     output.value === "Select a cipher"
   ) {
     if (confirm(`Share site link`)) {
-      const message = `Try out this dope translator\nTranslate text from English to Morse, Binary, Base64, Caesar(Encoding and Decoding),  Atbash, Reverse and vice versa\nOpen at ${window.location.href}`;
+        const message = `Try out CipherX\nAn awesome multi-cipher translator\nTranslate text from English to Morse, Binary, Base64, Caesar(Encoding and Decoding),  Atbash, Reverse and vice versa\nTry it out yourself at ${window.location.href}`;
       if (navigator.share) {
         navigator
           .share({
@@ -1389,7 +1389,7 @@ function shareTranslation() {
         fallbackShare(message);
       }
     } else {
-      alert("Nothing to share! Translate something first! 😅");
+      alert("Nothing to share! Translate something first!");
     }
     return;
   }
@@ -1430,7 +1430,7 @@ function fallbackShare(message) {
   }
 }
 function sharesite() {
-  const message = `Try out this CipherX\nAn awesome multi-cipher translator\nTranslate text from English to Morse, Binary, Base64, Caesar(Encoding and Decoding),  Atbash, Reverse and vice versa\nTry it out yourself at ${window.location.href}`;
+  const message = `Try out CipherX\nAn awesome multi-cipher translator\nTranslate text from English to Morse, Binary, Base64, Caesar(Encoding and Decoding),  Atbash, Reverse and vice versa\nTry it out yourself at ${window.location.href}`;
   if (navigator.share) {
     navigator
       .share({

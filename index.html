@@ -540,8 +540,8 @@
         return voices.find(
           (voice) =>
             voice.name.includes("Samantha") ||
-            voice.name.includes("Google UK English Female") || // Good fallback
             voice.name.includes("Google US English Female") || // Good fallback
+            voice.name.includes("Google UK English Female") || // Good fallback
             voice.name.includes("Microsoft Zira Desktop") // Good fallback
         );
       }

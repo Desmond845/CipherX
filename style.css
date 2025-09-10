@@ -1,0 +1,952 @@
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  object-fit: fill;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body {
+  /* background-color: #0d1117; */
+  /* background-color: black; */
+  background-color: #0a192f;
+  margin: 0;
+  font-family: monospace, Arial, sans-serif;
+  /* padding: 5px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: slide-in 0.7s ease-in-out forwards;
+  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Rainbow animation */
+@keyframes rainbow {
+  0% {
+    background-color: #ff6b6b;
+  }
+
+  20% {
+    background-color: #ff9e6b;
+  }
+
+  40% {
+    background-color: #ffdf6b;
+  }
+
+  60% {
+    background-color: #6bff9e;
+  }
+
+  80% {
+    background-color: #6b9eff;
+  }
+
+  100% {
+    background-color: #9e6bff;
+  }
+}
+
+.rainbow-theme {
+  animation: rainbow 3s infinite alternate;
+  transition: all 300ms ease-in-out;
+}
+
+details[open] {
+  background: #b6d8ff;
+  transition: all 300ms ease-in-out;
+  height: auto;
+}
+
+#learn-more-link {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+#cipher-link {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+#cipher-link:hover {
+  text-decoration: underline;
+}
+
+.cpy,
+.tts {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cpy:hover::after {
+  content: "Copy Output";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 2px;
+  left: -15px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.tts:hover::after {
+  content: "Text to Speech";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 2px;
+  left: -15px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+details {
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  background: #b6d8ff;
+  border-radius: 5px;
+  height: 30px;
+  padding-top: 20px;
+  transition: all 300ms ease-in-out;
+  transform: scale(0.95);
+}
+
+details:focus-visible {
+  outline: none;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+details p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+textarea {
+  height: 90px;
+  width: 90vw;
+  font-size: 20px;
+  transform: scale(0.95);
+  transition: all 300ms ease-in-out;
+  font-family: monospace, Arial, sans-serif;
+  border-radius: 1px;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+p,
+label {
+  color: #00ffff;
+  transform: scale(0.95);
+  transition: all 300ms ease-in-out;
+}
+
+.text {
+  margin-left: 9px;
+  transform: scale(0.95);
+  transition: all 300ms ease-in-out;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  border-style: none;
+  height: 30px;
+  width: 90vw;
+  font-size: 17px;
+  color: white;
+  font-family: monospace, Arial, sans-serif;
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: all 300ms ease-in-out;
+  outline: none;
+}
+
+button:hover,
+p:hover,
+label:hover,
+textarea:hover,
+details:hover,
+#text:hover,
+#key:hover,
+input:hover,
+.text:hover,
+.contact:hover,
+h3:hover,
+small:hover,
+.cont:hover,
+.cont2:hover {
+  transform: scale(1);
+}
+
+input {
+  transform: scale(0.95);
+  height: 15px;
+  width: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-top: px;
+  transform: scale(0.95);
+}
+
+#text,
+#key {
+  width: 90vw;
+  border: none;
+  border-radius: 2px;
+  height: 30px;
+  font-size: 13px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 300ms ease-in-out;
+  will-change: transform;
+  font-weight: bold;
+  transform: scale(0.95);
+  font-family: monospace, Arial, sans-serif;
+  transform: scale(0.95);
+}
+
+#text {
+  position: relative;
+}
+
+#text:focus,
+#key:focus {
+  outline: none;
+  box-shadow: 0 0 0px 4px rgb(96 165 250 / 0.25);
+  transition: all 200ms ease-in-out;
+  /* color:rgb(59 130 246) */
+}
+
+#text:focus-visible,
+#key:focus-visible {
+  outline: none;
+  /* box-shadow: 0 0 5px 1px #00ff00; */
+  box-shadow: 0 0 0px 4px rgb(96 165 250 / 0.25);
+
+  transform: scale(1);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.about {
+  margin-top: 100px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  z-index: 1;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: foot 1.5s ease-in-out infinite;
+}
+
+@keyframes foot {
+  0%,
+  100% {
+    box-shadow: 0 0 3px #00ff00;
+  }
+
+  50% {
+    box-shadow: 0 0 7px #00ff00;
+  }
+}
+
+@keyframes foot1 {
+  0%,
+  100% {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+  }
+
+  50% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  }
+}
+
+.cont3 {
+  display: flex;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: 12px 12px 12px 2px rgba(0, 0, 0, 0.1) inset,
+    -5px -5px 5px rgba(0, 0, 0, 0.1) inset;
+  transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 400px) {
+  .dev {
+    font-size: 70.5%;
+    font-weight: bolder;
+  }
+}
+
+header {
+  padding-top: 10px;
+  text-align: center;
+  transform: scale(0.99);
+}
+
+header:hover {
+  transform: scale(1);
+}
+
+h1 {
+  color: #64ffda;
+  text-shadow: 0 0 8px #64ffda;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #64ffda;
+  }
+
+  to {
+    text-shadow: 0 0 15px #64ffda, 0 0 25px #64ffda;
+  }
+}
+
+header p {
+  font-size: bold;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 25px;
+  color: white;
+  transform: scale(0.95);
+}
+
+.glow {
+  color: #64ffda;
+  text-shadow: 0 0 8px #64ffda;
+  animation: glow 1s infinite alternate;
+}
+
+.contact {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: px;
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  font-family: monospace, Arial, sans-serif;
+  transition: all 200ms ease-in-out;
+  margin-top: 10px;
+  transform: scale(0.95);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ach-btn,
+.stats-btn,
+.hist-btn,
+.theme-btn,
+.share-btn {
+  position: relative;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.stats-btn {
+  color: white;
+}
+
+.theme-btn:hover,
+.stats-btn:hover,
+.hist-btn:hover,
+.share-btn:hover,
+.ach-btn:hover,
+.icon:hover {
+  transform: scale(1.2);
+  transition: all 300ms ease-in-out;
+  font-size: 20px;
+}
+
+.theme-btn:hover::after {
+  content: "";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 2px;
+  right: 140px;
+  color: white;
+  transition: all 200ms ease-in-out;
+  animation: tip 3s infinite;
+}
+
+@keyframes tip {
+  0% {
+    content: "Currently in Dark mode";
+  }
+
+  100% {
+    content: "Switch to Light mode";
+  }
+}
+
+.stats-btn:hover::after {
+  content: "View Statistics";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 2px;
+  left: -15px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.hist-btn:hover::after {
+  content: "View History";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 90%;
+  width: 2px;
+  left: -15px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.share-btn:hover::after {
+  content: "Share";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 11px;
+  top: 90%;
+  width: 2px;
+  left: 10px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cont1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  padding: 5px;
+  color: white;
+  margin-bottom: 10px;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.cont1:hover,
+.cont:hover {
+  box-shadow: none;
+  transform: scale(1);
+}
+
+.icon-btn:hover {
+  transform: scale(1);
+}
+
+#historySection {
+  display: none;
+}
+
+#historySection p {
+  color: white;
+  margin-left: 10px;
+}
+
+h3 {
+  color: #007bff;
+  text-align: center;
+  font-weight: bolder;
+  transform: scale(0.95);
+}
+
+small {
+  color: white;
+  font-weight: bold;
+  margin-left: 20px;
+  transform: scale(0.95);
+}
+
+/* Icon Visibility */
+.icon-light {
+  display: block;
+}
+
+.icon-light:hover {
+  animation: 1s alternate-reverse ease-in-out infinite;
+}
+
+.icon-dark {
+  display: none;
+}
+
+/* Refresh spin animation */
+.icon-btn {
+  border: none;
+  background: none;
+  background-color: inherit;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.icon-btn .round.animating {
+  animation: spin1 300ms ease-in-out;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#del,
+#ref,
+#ext {
+  position: relative;
+}
+
+#ret {
+  color: white;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+#ret:hover::after {
+  content: "Share Site";
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 13px;
+  top: 120%;
+  width: 30px;
+  left: 0px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+#del:hover::after {
+  content: "Clear History";
+  color: white !important;
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 30px;
+  left: -10px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+#ref:hover::after {
+  content: "Refresh";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 20px;
+  left: 0px;
+  text-align: center;
+  color: white !important;
+  transition: all 200ms ease-in-out;
+}
+
+.ach-btn:hover::after {
+  content: "Achievements";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 20px;
+  left: -10px;
+  text-align: center;
+  color: white;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+}
+
+#ext:hover::after {
+  content: "Exit";
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bolder;
+  font-size: 10px;
+  top: 100%;
+  width: 20px;
+  left: 10px;
+  text-align: center;
+  color: white !important;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+}
+
+/* Trash can shake animation */
+.icon-btn:hover .trash-can {
+  animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* X mark appears on hover */
+#achievementsList div {
+  color: white;
+}
+
+.greet {
+  cursor: pointer;
+  color: #64ffda;
+  font-weight: bold;
+}
+
+.cont {
+  transform: scale(0.95);
+  transition: all 300ms ease-in-out;
+}
+
+.cont button {
+  background: none;
+}
+
+.cont2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  width: auto;
+  height: auto;
+}
+
+/* LIGHT THEME OVERRIDES */
+[data-theme="light"] .cont button {
+  color: black;
+}
+
+[data-theme="light"] #ret {
+  color: black;
+}
+
+[data-theme="light"] #ret:hover::after {
+  color: black;
+  font-weight: bolder;
+}
+
+[data-theme="light"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="light"] .greet {
+  color: black;
+}
+
+[data-theme="light"] #historySection {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+[data-theme="light"] #ref:hover::after {
+  color: black !important;
+  font-weight: bold;
+}
+
+[data-theme="light"] .theme-btn:hover::after {
+  font-weight: bolder;
+  color: black;
+  font-size: 10px;
+  top: 130%;
+  right: 140px;
+  transition: all 200ms ease-in-out;
+  animation: tip1 2s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes tip1 {
+  0%,
+  49.9999% {
+    content: "Currently in Light mode";
+  }
+
+  50%,
+  100% {
+    content: "Switch to Dark mode";
+  }
+}
+
+[data-theme="light"] .icon-btn {
+  color: black;
+}
+
+[data-theme="light"] .ach-btn:hover::after {
+  color: #000;
+}
+
+[data-theme="light"] .share-btn {
+  color: black;
+}
+
+[data-theme="light"] .ach-btn {
+  color: black;
+}
+
+[data-theme="light"] .share-btn:hover::after {
+  color: #000;
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+[data-theme="light"] #ext:hover::after {
+  color: black !important;
+  font-weight: bolder;
+}
+
+[data-theme="light"] #del:hover::after {
+  color: black !important;
+  font-weight: bold;
+}
+
+[data-theme="light"] details {
+  background: #b6d8ff;
+}
+
+[data-theme="light"] h3 {
+  color: black;
+}
+
+[data-theme="light"] small {
+  color: black;
+  font-weight: normal;
+}
+
+[data-theme="light"] #text,
+#key {
+  border: 1px solid black !important;
+  width: 90vw;
+}
+
+[data-theme="light"] #text:focus,
+#key:focus {
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 123, 255, 1);
+  transition: all 200ms ease-in-out;
+}
+
+[data-theme="light"] #text:focus-visible,
+#key:focus-visible {
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 123, 255, 1);
+  transition: all 200ms ease-in-out;
+}
+
+[data-theme="light"] .icon-light {
+  display: none;
+}
+
+[data-theme="light"] #achievementsList div {
+  color: black;
+}
+
+[data-theme="light"] .icon-dark {
+  display: block;
+}
+
+[data-theme="light"] h1 {
+  color: #000;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] p {
+  color: #000 !important;
+}
+
+[data-theme="light"] label {
+  color: #000 !important;
+}
+
+[data-theme="light"] #cipher-link {
+  color: #000 !important;
+}
+
+[data-theme="light"] .theme-btn {
+  color: black !important;
+}
+
+[data-theme="light"] .hist-btn {
+  color: black !important;
+}
+
+[data-theme="light"] .stats-btn {
+  color: black !important;
+}
+
+[data-theme="light"] textarea {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid black !important;
+}
+
+[data-theme="light"] .about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* covers the whole element */
+  z-index: 2;
+  /* puts shadow on top */
+  pointer-events: none;
+  /* so it won’t block clicks */
+  animation: foot1 1.5s ease-in-out infinite;
+}
+
+[data-theme="light"] .icon {
+  color: #000;
+}
+
+[data-theme="light"] .glow {
+  color: black;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] header {
+  height: 248px;
+}
+
+[data-theme="light"] header,
+.cont1,
+.cont {
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 3px;
+  transition: 0.15s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+[data-theme="light"] .hist-btn:hover::after {
+  color: black;
+  font-size: 10px;
+}
+
+[data-theme="light"] .stats-btn:hover::after {
+  color: black;
+  font-size: 10px;
+}
+
+[data-theme="light"] .cpy:hover::after {
+  color: black;
+  font-size: 10px;
+}
+
+[data-theme="light"] .tts:hover::after {
+  color: black;
+  font-size: 10px;
+}

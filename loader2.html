@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CipherX</title>
+    <link rel="icon" type="png" href="cipherx.png" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap");
+
+      /* Base Styling and Theme */
+      :root {
+        --bg-color: #0a192f;
+        --main-color: #64ffda;
+        --accent-color: #64ffda;
+      }
+
+      body {
+        background: var(--bg-color);
+        color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        font-family: "Rajdhani", "Helvetica", Arial, sans-serif;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden; /* Prevent scrollbar during animation */
+      }
+
+      /* CIPHERX Display */
+      .cipherx-display {
+        display: flex;
+        gap: 10px; /* Spacing between letters */
+        margin: 3rem 0 1.5rem;
+        font-size: 5rem; /* Large and visible */
+        font-weight: bold;
+        line-height: 1;
+        text-shadow: 0 0 20px #64ffda;
+        perspective: 1000px; /* For 3D flip effect */
+      }
+
+      /* Individual Letter Styling (The Flip Book) */
+      .letter-container {
+        width: 30px; /* Width of the character space */
+        height: 90px;
+        position: relative;
+        cursor: default;
+      }
+
+      .letter-card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.1s ease-out; /* Smoother, faster flip transition */
+      }
+
+      .letter-front,
+      .letter-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Hide the flip-book elements by making them invisible initially */
+        color: transparent;
+        text-shadow: none;
+        /* No border/box around the characters */
+      }
+
+      .letter-front {
+        /* Initial letter visibility is handled by JS but inherits display properties */
+      }
+
+      .letter-back {
+        transform: rotateX(180deg);
+      }
+
+      /* The flipping state */
+      .flipping .letter-card {
+        transform: rotateX(180deg);
+      }
+
+      /* The "Locked" (Target) state */
+      .locked .letter-front,
+      .locked .letter-back {
+        color: var(--main-color); /* Make final character visible */
+        transition: color 0.5s;
+        text-shadow: 0 0 20px #64ffda;
+      }
+
+      /* Initial state: word appears as target letters */
+      .initial .letter-front,
+      .initial .letter-back {
+        color: var(--main-color);
+        text-shadow: 0 0 20px #64ffda;
+      }
+
+      /* Flashing effect for locked characters */
+      .locked-glow {
+        animation: glow-flash 1s ease-out 1;
+      }
+
+      @keyframes glow-flash {
+        0% {
+          text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+        50% {
+          text-shadow: 0 0 25px var(--main-color);
+        }
+        100% {
+          text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+      }
+
+      /* Progress Bar */
+      .progress-container {
+        width: 350px;
+        height: 8px;
+        background: rgba(0, 255, 0, 0.1);
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+        margin-top: 1.5rem;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        background: var(--main-color);
+        box-shadow: 0 0 10px var(--main-color);
+        transition: width 0.3s ease-out;
+      }
+      /* Status Text */
+      .status {
+        font-size: 1.2rem;
+        margin: 2rem 0 0;
+        color: var(--accent-color);
+        min-height: 25px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cipherx-display" id="cipherxDisplay"></div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="status" id="status">INITIALIZING SYSTEM...</div>
+    <div style="position: fixed; bottom: 20px; color: gray">v1.2</div>
+    <script>
+      class CipherXLoader {
+        constructor() {
+          this.targetWord = "CipherX";
+          this.alphabet =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*0123456789";
+          this.isAnimating = false;
+          this.completedLetters = 0;
+          this.totalLetters = this.targetWord.length;
+          this.letterElements = [];
+          this.flipDuration = 50; // ms per flip
+          this.setupDelay; // Delay before animation starts (for 'length' to appear)
+          this.completionDelay = 1500; // Delay before redirect
+          this.progressBar = document.getElementById("progressBar");
+          this.statusElement = document.getElementById("status");
+
+          this.createLetterBoxes();
+          this.start();
+        }
+
+        createLetterBoxes() {
+          const container = document.getElementById("cipherxDisplay");
+          container.innerHTML = "";
+
+          this.targetWord.split("").forEach((targetLetter, index) => {
+            const letterContainer = document.createElement("div");
+            letterContainer.className = "letter-container initial";
+            letterContainer.id = `letterContainer-${index}`;
+
+            const letterCard = document.createElement("div");
+            letterCard.className = "letter-card";
+            letterCard.id = `letterCard-${index}`;
+
+            letterCard.innerHTML = ` 
+                        <div class="letter-front">${targetLetter}</div>
+                        <div class="letter-back">${targetLetter}</div>
+                    `;
+
+            letterContainer.appendChild(letterCard);
+            container.appendChild(letterContainer);
+            this.letterElements.push({
+              container: letterContainer,
+              card: letterCard,
+              front: letterCard.querySelector(".letter-front"),
+              back: letterCard.querySelector(".letter-back"),
+              targetLetter: targetLetter,
+            });
+          });
+        }
+
+        async start() {
+          if (this.isAnimating) return;
+          this.isAnimating = true;
+
+          // this.statusElement.textContent = `Awaiting input for word: ${this.targetWord.length} characters...`;
+
+          await this.delay(this.setupDelay); // Pause for length to register
+
+          // Clear 'initial' class to allow flipping color/style to take over
+          this.letterElements.forEach((el) =>
+            el.container.classList.remove("initial")
+          );
+
+          this.statusElement.textContent =
+            "Processing initialization sequence...";
+
+          // Start all animations concurrently
+          const animationPromises = this.letterElements.map((el, index) =>
+            this.animateLetter(el, index)
+          );
+
+          await Promise.all(animationPromises);
+
+          this.statusElement.textContent =
+            "CipherX: Initialization Complete. Redirecting...";
+          await this.delay(this.completionDelay);
+
+          // Final action: Redirect user
+
+          window.location.href = "app.html"; // Uncomment this line to enable actual redirect
+        }
+
+        async animateLetter(el, index) {
+          const targetIndex = this.alphabet.indexOf(el.targetLetter);
+          let currentIndex = 0;
+
+          // Ensure target letter is in the alphabet
+          if (targetIndex === -1) {
+            this.completeLetter(el);
+            return;
+          }
+
+          // Loop through the alphabet up to the target index
+          while (currentIndex <= targetIndex) {
+            const currentLetter =
+              this.alphabet[currentIndex % this.alphabet.length];
+
+            // 1. Update faces with the current letter
+            el.front.textContent = currentLetter;
+            el.back.textContent = currentLetter;
+
+            // 2. Trigger flip animation
+            el.card.classList.add("flipping");
+
+            await this.delay(this.flipDuration); // Wait for the visual flip
+
+            // 3. Remove flipping class for the next iteration
+            el.card.classList.remove("flipping");
+
+            // The actual letter flip happens on the next step's update
+
+            currentIndex++;
+          }
+
+          this.completeLetter(el);
+        }
+
+        completeLetter(el) {
+          // Lock the final letter style
+          el.container.classList.add("locked");
+          el.container.classList.add("locked-glow");
+
+          this.completedLetters++;
+          this.updateProgressBar();
+        }
+
+        updateProgressBar() {
+          const progress = (this.completedLetters / this.totalLetters) * 100;
+          this.progressBar.style.width = `${progress}%`;
+        }
+
+        delay(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Instantiate the loader which auto-starts in its constructor
+        new CipherXLoader();
+      });
+    </script>
+  </body>
+</html>

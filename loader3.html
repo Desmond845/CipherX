@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"  href="ciph.png" />
+    <title>CipherX</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap");
+
+      /* --- Base Setup and Theme --- */
+      :root {
+        --bg-color: #0a192f;
+        --main-color: #64ffda;
+        --accent-color: #64ffda;
+        --flip-duration: 0.1s; /* Time for the visual 180-degree flip */
+      }
+
+      body {
+        background: var(--bg-color);
+        color: var(--main-color);
+        display: flex;
+        font-family: "Rajdhani", "Helvetica", Arial, sans-serif;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      /* --- CIPHERX Display & Container --- */
+      .cipherx-display {
+        display: flex;
+        gap: 3vw;
+        margin: 3rem 0 1.5rem;
+        font-size: 10vw; /* Slightly smaller for a cleaner look */
+        font-weight: bold;
+        line-height: 1;
+        perspective: 1000px; /* Essential for 3D flip */
+      }
+
+      /* --- Individual Character Box (The Flip Book) --- */
+      .letter-container {
+        width: 12vw;
+        height: 20vw;
+        position: relative;
+        cursor: default;
+        /* No border/box here, just the card inside */
+      }
+
+      /* The Card Element - handles the 3D rotation */
+      .letter-card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform var(--flip-duration) cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Front and Back Faces of the Card */
+      .letter-front,
+      .letter-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* The visual flip-book design */
+        border: 3px solid var(--main-color);
+        border-radius: 8px;
+        background: rgba(0, 255, 0, 0.05); /* Subtle background for contrast */
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+      }
+
+      .letter-back {
+        /* Flip the back face so it's ready to show when the card rotates */
+        transform: rotateX(180deg);
+        background: var(--accent-color);
+        color: var(--bg-color); /* Dark text on the accent color back */
+      }
+
+      /* The Class that triggers the 180-degree flip */
+      .flipping {
+        transform: rotateX(180deg);
+      }
+
+      /* --- Locked (Completed) State --- */
+      .locked .letter-front,
+      .locked .letter-back {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-color);
+      }
+      .locked .letter-back {
+        /* Keep the green-on-dark style for the final character */
+        background: rgba(0, 255, 0, 0.2);
+        color: var(--main-color);
+      }
+
+      /* --- Progress Bar --- */
+      .progress-container {
+        width: 500px;
+        max-width: 80vw;
+        height: 6px;
+        background: rgba(0, 255, 0, 0.1);
+        border-radius: 3px;
+        margin-top: 1.5rem;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(
+          90deg,
+          var(--accent-color),
+          var(--main-color)
+        );
+        box-shadow: 0 0 5px var(--main-color);
+        transition: width 0.3s ease-out;
+      }
+
+      /* --- Status Text --- */
+      .status {
+        font-size: 1.1rem;
+        margin: 2rem 0 0;
+        color: var(--accent-color);
+        min-height: 25px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cipherx-display" id="cipherxDisplay"></div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="status" id="status">CIPHERX: Initializing System...</div>
+    <div style="position: fixed; bottom: 20px; color: gray">v1.2</div>
+
+    <script>
+      class CipherXLoader {
+        constructor() {
+          this.targetWord = "CipherX";
+          // A mix of letters, numbers, and symbols for a dynamic "scrolling" effect
+          this.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*0123456789";
+          this.totalLetters = this.targetWord.length;
+          this.completedLetters = 0;
+
+          // Elements
+          this.progressBar = document.getElementById("progressBar");
+          this.statusElement = document.getElementById("status");
+          this.letterElements = [];
+
+          // Timing & Speed
+          this.flipStepTime = 80; // How often the letter changes (ms)
+          this.setupDelay; // Delay for "length" to appear
+          this.completionDelay = 1000; // Delay before redirect
+
+          this.createLetterBoxes();
+          this.start();
+        }
+
+        createLetterBoxes() {
+          const container = document.getElementById("cipherxDisplay");
+          container.innerHTML = "";
+
+          this.targetWord.split("").forEach((targetLetter, index) => {
+            // Create main container
+            const letterContainer = document.createElement("div");
+            letterContainer.className = "letter-container";
+
+            // Create the rotating card
+            const letterCard = document.createElement("div");
+            letterCard.className = "letter-card";
+            letterCard.id = `letterCard-${index}`;
+
+            // Initial character in the flip book is always 'A'
+            letterCard.innerHTML = `
+                        <div class="letter-front"></div>
+                        <div class="letter-back"></div>
+                   `;
+
+            letterContainer.appendChild(letterCard);
+            container.appendChild(letterContainer);
+
+            this.letterElements.push({
+              container: letterContainer,
+              card: letterCard,
+              front: letterCard.querySelector(".letter-front"),
+              back: letterCard.querySelector(".letter-back"),
+              targetLetter: targetLetter,
+            });
+          });
+        }
+
+        async start() {
+          // 1. Initial Length Status
+          // this.statusElement.textContent = `Target String Length: ${this.totalLetters} characters...`;
+          await this.delay(this.setupDelay);
+
+          // 2. Start Animation Status
+          this.statusElement.textContent =
+            "Processing initialization sequence...";
+
+          // 3. Start all letter animations concurrently
+          const animationPromises = this.letterElements.map((el, index) =>
+            this.animateLetter(el, index)
+          );
+
+          await Promise.all(animationPromises); // Wait for all letters to lock
+
+          // 4. Completion and Redirect
+          this.statusElement.textContent =
+            "CIPHERX: Initialization Complete. Redirecting...";
+          await this.delay(this.completionDelay);
+
+          window.location.href = "app.html"; // <-- Uncomment for real world use
+        }
+
+        async animateLetter(el, index) {
+          const targetIndex = this.alphabet.indexOf(el.targetLetter);
+          let currentIndex = 0;
+
+          // Determine a randomized number of extra flips for visual variation
+          const extraFlips = index * 5 + Math.floor(Math.random() * 10);
+          const totalFlips = targetIndex + extraFlips;
+
+          // Loop for the desired number of total flips
+          for (let i = 0; i < totalFlips; i++) {
+            const currentLetter =
+              this.alphabet[currentIndex % this.alphabet.length];
+
+            // Update the next character to be seen
+            const nextIndex = (currentIndex + 1) % this.alphabet.length;
+            const nextLetter = this.alphabet[nextIndex];
+
+            // Set the current letter on the visible face and the next letter on the back face
+            el.front.textContent = currentLetter;
+            el.back.textContent = nextLetter;
+
+            // Trigger the 180-degree flip animation
+            el.card.classList.add("flipping");
+
+            await this.delay(this.flipStepTime);
+
+            // Reset the flip state so the next letter is now on the front
+            el.card.classList.remove("flipping");
+
+            currentIndex++;
+          }
+
+          // Ensure the final target letter is displayed and locked
+          el.front.textContent = el.targetLetter;
+          el.back.textContent = el.targetLetter;
+          this.completeLetter(el);
+        }
+
+        completeLetter(el) {
+          el.container.classList.add("locked");
+          this.completedLetters++;
+          this.updateProgressBar();
+        }
+
+        updateProgressBar() {
+          const progress = (this.completedLetters / this.totalLetters) * 100;
+          this.progressBar.style.width = `${progress}%`;
+        }
+
+        delay(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+      }
+
+      window.addEventListener("load", () => {
+        new CipherXLoader();
+      });
+      // document.addEventListener("DOMContentLoaded",
+      // new CipherXLoader
+      // );
+    </script>
+  </body>
+</html>

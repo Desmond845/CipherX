@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://desmond845/CipherX/sitemap.xml

@@ -26,7 +26,7 @@ async function logErrorToEmail(errorData) {
           _subject: "CipherX Error Report",
           _captcha: "false",
           App: "CipherX",
-          Version: "1.2",
+          Version: "1.3",
           User: "daxtech",
           Time: new Date().toISOString(),
           Error: errorData.message,

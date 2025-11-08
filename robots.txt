@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /nonexistent/
-
-Sitemap: https://desmond845/CipherX/sitemap.xml

@@ -479,7 +479,7 @@ class PinModal {
   }
 
   createModal(message, defaultValue) {
-    if (message.includes("new name)) {
+    if (message.includes("new name")) {
       this.modal = document.createElement("div"); this.modal.className = "modal-overlay";
       this.modal.innerHTML = `
             <div class="modal-content">

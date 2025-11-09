@@ -484,7 +484,7 @@ class PinModal {
       this.modal.innerHTML = `
             <div class="modal-content">
                 <h3>${message}</h3>
-                <input type="text" id="pinEntryInput" placeholder="Enter pin" value="${defaultValue}" maxlength="20">
+                <input type="text" id="pinEntryInput" placeholder="Enter new name" value="${defaultValue}" maxlength="20">
                  <p class="char-count"><span id="charCount">0</span>/20 characters</p>
 
                 <div class="modal-actions">

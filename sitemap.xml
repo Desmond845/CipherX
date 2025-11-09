@@ -13,9 +13,14 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://desmond845.github.io/CipherX/inst.html</loc>
+    <loc>https://desmond845.github.io/CipherX/getting-started.html</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+<loc>https://desmond845.github.io/CipherX/getting-started.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

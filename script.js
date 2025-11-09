@@ -510,6 +510,7 @@ class PinModal {
                 }
             </div>
             `;
+}
     else if(message.includes("new message pin")) {
 
       this.modal = document.createElement("div");

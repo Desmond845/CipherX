@@ -5483,7 +5483,7 @@ function openwhatsapp() {
 
       // Show success feedback
       toast.success("WhatsApp opened! Share your secret message");
-      callNotify("Successfully shared encrypted message url to whatsapp");
+     // callNotify("Successfully shared encrypted message url to whatsapp");
     } catch (err) {
       toast.error("Whatsapp could not be opened");
     }
@@ -5516,7 +5516,7 @@ function shareMessageLink() {
           .share({ text: message })
           .then(() => {
             toast.success("Shared successfully!", "3000");
-            callNotify("Successfully shared encrypted message via url");
+           // callNotify("Successfully shared encrypted message via url");
           })
           .catch((err) => {
             toast.error(`An error occured while sharing: ${err}`);

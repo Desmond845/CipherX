@@ -479,9 +479,8 @@ class PinModal {
   }
 
   createModal(message, defaultValue) {
-    if (message.includes("new name") || message.includes("new message pin")) {
-      this.modal = document.createElement("div");
-      this.modal.className = "modal-overlay";
+    if (message.includes("new name)) {
+      this.modal = document.createElement("div"); this.modal.className = "modal-overlay";
       this.modal.innerHTML = `
             <div class="modal-content">
                 <h3>${message}</h3>
@@ -511,7 +510,41 @@ class PinModal {
                 }
             </div>
             `;
-    } else {
+    else if(message.includes("new message pin")) {
+
+      this.modal = document.createElement("div");
+      this.modal.className = "modal-overlay";
+      this.modal.innerHTML = `
+            <div class="modal-content">
+                <h3>${message}</h3>
+                <input type="text" id="pinEntryInput" placeholder="Enter pin" value="${defaultValue}" maxlength="8">
+                 <p class="char-count"><span id="charCount">0</span>/8 characters</p>
+                <div class="modal-actions">
+<button class="cancel-btn">Cancel</button>
+                <button class="create-btn">OK</button>
+                </div>
+                ${
+                  this.history.length > 0
+                    ? `
+                    <div class="modal-history">
+                        <p>Recent values:</p>
+                        <div class="history-list">
+                            ${this.history
+                              .map(
+                                (item) =>
+                                  `<span class="history-item" data-value="${item}">${item}</span>`
+                              )
+                              .join("")}
+                        </div>
+                    </div>
+                 `
+                    : ""
+                }
+            </div>
+            `;
+}
+
+ else {
       this.modal = document.createElement("div");
       this.modal.className = "modal-overlay";
       this.modal.innerHTML = `

@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJFQ8DB381">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WJFQ8DB381");
+  </script>
+
+  <meta charset="UTF-8" />
+  <!-- ENHANCED TITLE - More compelling -->
+  <title>CipherX - Real-time Secret Message Encoder | 10+ Ciphers | AI Auto-Detection | Free Tool</title>
+  <meta name="description"
+    content="Free online/offline cipher tool. Encode/decode messages in Hexadecimal, Base64, Morse, Binary, Caesar, Atbash, A1Z26 & UltraX security mode. No installation needed.">
+  <meta name="keywords" content="cipher, encode messages, decode secret messages, morse code, binary converter, base64, hex converter, caesar cipher, cryptography tool, secret messaging, CipherX, cipherx, cipher tool with ultx, cipher tool with ULTX, cipher tool with UltraX mode, secret messaging tool called CipherX,
+    best cipher tool, free tools, cipher encoder, cipher decoder, UltraX Security">
+  <meta name="author" content="CipherX">
+  <meta name="google-site-verification" content="jZUs_hxj2fw_o0OvJedz0MaOTvUk5OY2ZSez7es_0PI" />
+  <!-- Favicon fixes -->
+  <link rel="icon" type="image/png" href="ciph.png">
+  <link rel="apple-touch-icon" href="ciph.png">
+  <link rel="shortcut icon" href="ciph.png">
+  <link rel="icon" sizes="192x192" href="ciph.png">
+  <link rel="icon" sizes="512x512" href="ciph.png">
+
+  <!-- For newer browsers -->
+  <link rel="icon" type="image/svg+xml" href="ciph.png">
+  <meta name="theme-color" content="#00f0ff">
+  <!-- Open Graph tags (for social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://desmond845.github.io/CipherX/">
+  <meta property="og:title" content="CipherX - Ultimate Real-time Text Encoder and Decoder with AI auto-detection">
+  <meta property="og:description"
+    content="Watch messages encode INSTANTLY as you type. With over 10+ ciphers and super mode. No buttons, no waiting - pure cipher magic with AI auto-detection and UltraX security.">
+  <meta property="og:site_name" content="CipherX" />
+  <meta name="application-name" content="CipherX">
+  <meta property="og:image" content="https://desmond845.github.io/CipherX/ciph.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CipherX - Secret Message Encoder">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CipherX - Secret Message Tool">
+  <meta name="twitter:description" content="Free online cipher encoder/decoder with 10+ encryption method">
+  <!-- SUPERCHARGED DESCRIPTION -->
+  <meta name="description"
+    content="🚀 Free online cipher tool with REAL-TIME encoding. No buttons needed - AI automatically detects encode/decode. 10+ ciphers including UltraX military-grade security, voice control, and instant sharing. No installation required.">
+  <!-- Benefit-focused description -->
+  <meta name="description"
+    content="Encode secret messages INSTANTLY as you type - no buttons needed! CipherX AI automatically knows when you're encoding or decoding. Plus voice control, military-grade UltraX security, and 10+ ciphers. FREE online tool.">
+  <!-- ENHANCED KEYWORDS - Focus on your UNIQUE features -->
+  <meta name="keywords"
+    content="real-time cipher, automatic encode decode, AI cipher detection, voice control encryption, UltraX security, secret message generator, instant cipher tool, no button encoding, smart cryptography">
+
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://desmond845.github.io/CipherX/">
+
+  <!-- Theme Color for Mobile -->
+  <meta name="theme-color" content="#00f0ff">
+  <meta name="msapplication-TileColor" content="#00f0ff">
+  <!-- Important for SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CipherX",
+ "description": "Free online cipher tool with real-time encoding. 10+ ciphers including UltraX security mode, voice control, and instant sharing.",
+        "url": "https://desmond845.github.io/CipherX/",
+        "logo": "https://desmond845.github.io/CipherX/ciph.png",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "permissions": "microphone",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+              "@type": "Person",
+              "name": "Desmond"
+            },
+        "featureList": [
+          "Real-time encoding",
+          "AI auto-detection",
+          "Voice control",
+          "Text to Speech",
+          "Instant shareable links",
+          "Mobile optimised interface",
+          "Data export",
+          "Personalized",
+          "UltraX security mode",
+          "10+ cipher methods",
+          "Instant sharing"
+        ]
+      }
+    </script>
+</head>
+
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="top-nav">
+    <button class="big-nav" id="top-ach" onclick="toggleach()">Achievements</button>
+    <button class="big-nav" id="top-stat" onclick="toggleStats()">Statistics</button>
+    <button class="big-nav" id="top-home" onclick="acthome()">Home</button>
+    <button class="big-nav" id="top-ultx" onclick="toggleultx()">UltraX</button>
+    <button class="big-nav" id="top-hist" onclick="toggleHistory()">History</button>
+    <button id="pic-nav2" class="user-icon" onclick="icon()">
+      <span class="user-avatar">U</span>
+      <!-- Default fallback -->
+    </button>
+    <div id="prev-cont">
+      <img id="preview1" class="preview" src="#" alt="Your profile picture preview" onclick="icon()">
+    </div>
+  </div>
+  <div id="easteralert" style="display:none;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#00FF00" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="6" fill="#00FF00">
+        <animate attributeName="r" values="6; 8; 6" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1; 0.7; 1" dur="1s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
+  <header>
+    <h1 class="app-name">CipherX</h1>
+
+    <br>
+    <button id="themetoggle" class="theme-btn" type="button">
+      <!-- Sun Icon (Light Mode) -->
+      <svg class="icon-light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
+          stroke="currentColor" stroke-width="2" />
+        <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+
+      <!-- Moon Icon (Dark Mode) -->
+      <svg class="icon-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.9999 12.79C20.8426 14.4922 20.2038 16.1144 19.1581 17.4668C18.1125 18.8192 16.7034 19.8458 15.0956 20.4265C13.4878 21.0073 11.7479 21.1181 10.0794 20.7461C8.41092 20.3741 6.8829 19.5345 5.67413 18.3258C4.46536 17.117 3.62584 15.589 3.25381 13.9205C2.88178 12.252 2.99262 10.5121 3.57336 8.9043C4.15411 7.29651 5.18073 5.88737 6.53311 4.84175C7.8855 3.79612 9.5077 3.15731 11.2099 3C10.2133 4.34827 9.73375 6.00945 9.85843 7.68141C9.98312 9.35338 10.7038 10.9251 11.8893 12.1106C13.0748 13.2961 14.6465 14.0168 16.3185 14.1415C17.9904 14.2662 19.6516 13.7866 20.9999 12.79Z"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button id="resetpage" type="reset" class="icon-btn">
+      <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Circular arrow - will spin on click -->
+        <path
+          d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4.01 7.58 4.01 12C4.01 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+          fill="currentColor" />
+      </svg></button>
+
+  </header>
+
+  <main>
+    <section class="content-section" id="homepage">
+      <div id="userGreeting" class="greet" onclick="testVoice1()"></div>
+
+      <form class="">
+        <details open id="firsttime" style="display:none;">
+          <summary style="font-size: 1.4em; font-weight: bold; color: #ff6b6b; padding: 10px 0; cursor: pointer;">
+            🚀 Getting Started
+          </summary>
+          <div style="padding: 0px 10px 0 10px;">
+            <p><strong>1.</strong> Select a cipher from the home page<br>
+              <strong>2.</strong> Start typing - see live results instantly<br>
+              <strong>3.</strong> Use ULTX for maximum security<br>
+              <strong>4.</strong> Check History & Stats for your activity<br>
+              <strong>5.</strong> For more info visit the about tab in the profile section or the <a
+                href="getting-started.html">how to use page</a>
+
+            </p>
+          </div>
+        </details>
+        <details id="ciphers">
+
+
+
+          <summary id="ciphheading">
+            Ciphers
+          </summary>
+          <input type="radio" id="tohex" name="translator" value="Hexadecimal" />
+          <label for="tohex" class="">Hexadecimal</label><br />
+          <input type="radio" id="toasci" name="translator" value="Ascii" />
+          <label for="toasci" class="">Ascii</label><br />
+          <input type="radio" id="toa1z26" name="translator" value="A1Z26" />
+          <label for="toa1z26" class="">A1Z26</label><br />
+          <input type="radio" id="tobinary" name="translator" value="Binary" />
+          <label for="tobinary">Binary</label><br />
+          <input type="radio" id="tobase64" name="translator" value="Base64" />
+          <label for="tobase64">Base64</label><br />
+          <input type="radio" id="tomorse" name="translator" value="Morse" />
+          <label for="tomorse" class="">Morse</label><br />
+          <input type="radio" id="reverse" name="translator" value="Reverse" />
+          <label for="reverse">Reverse </label><br>
+          <input type="radio" id="toatbash" name="translator" value="Atbash" />
+          <label for="toatbash">Atbash</label>
+
+          <br>
+          <input type="radio" id="tocaesar" name="translator" value="Caesar" />
+          <label for="tocaesar">Caesar</label><br />
+          <div id="caesarblock" style="display: none;">
+            <input type="radio" id="caesarencode" name="caesar" value="Caesar" />
+            <label for="caesarencode">Encode Caesar</label><br />
+            <input type="radio" id="caesardecode" name="caesar" value="Caesar" />
+            <label for="caesardecode">Decode Caesar</label>
+          </div>
+        </details>
+        <p id="learn-more-link">
+          <a href="#info-section" id="cipher-link">Learn more about <span id="cipher-name"></span></a>
+        </p>
+        <br>
+        <p id="info"></p>
+        <br>
+        <p class="tracker"></p>
+
+        <div id="keyblock">
+          <input type="number" id="key" class="keys" placeholder="Key" /><br />
+        </div>
+        <br>
+        <div class="cont3">
+          <textarea id="text" type="text" class="input-area" placeholder="Text"></textarea>
+          <svg onclick="event.stopPropagation(); toggleMenu(1)" class="three-dots" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+          </svg>
+
+
+
+          <div class="menu-options" id="menu-1">
+            <button type="button" id="stt" class="voice-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <path d="M12 19v4" />
+                <path d="M8 23h8" />
+              </svg>
+
+              <span>Voice Typing</span></button>
+            <button id="cancel" type="button" class="delete-btn">
+              <svg id="" class="delete-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              <span>Clear</span></button>
+          </div>
+          <div class="menu-options">
+            <button type="button" id="stt">Voice Typing</button>
+            <button id="cancel" type="button" class="delete-btn">Clear</button>
+
+          </div>
+
+        </div>
+
+        <div class="cont3">
+          <textarea id="output" rows="6" cols="60" readonly placeholder="Translation" class="output"></textarea><br />
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="event.stopPropagation(); toggleMenu(2)"" class=" three-dots"
+            width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+          </svg>
+          <div class="menu-options" id="menu-2">
+            <button type="button" id="cpybtn" class="copy-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+              </svg>
+              <span>Copy Result</span></button>
+            <button onclick="testVoice()" type="button" class="tts-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+              </svg>
+              <span>Text to speech</span></button>
+          </div>
+
+
+        </div>
+
+      </form>
+      <div id="reward" style="display: none">
+        <details id="rewardinfo">
+          <summary>Easter Egg Features</summary>
+          <h4>Activation</h4>
+          <p>To activate type "activate/" in the input field.</p>
+          <h4>Commands:</h4>
+          <p>stats/ → Open Statistics.</p>
+          <p>hist/ → Open History.</p>
+          <p>ach/ → Open Achievements.</p>
+          <p>ultx/ → Open ultra mode.</p>
+          <p>share ach/ → Share Achievements</p>
+          <p>x hist/ → Delete History.</p>
+
+          <p>dark/ → Set theme to Dark.</p>
+          <p>light/ → Set theme to Light.</p>
+          <p>
+            color/ → Still experimental and under development but allows you set
+            background color to your choice. <br />Note: It only changes
+            background color so UI might be messy when this feature is used.
+          </p>
+          <p>xxx/ → Erase all data.</p>
+          <p>
+            fun/ → Still under development.<br />
+            Beautiful dots appear on body background. Reload page to cancel
+            effect. Best effect on darktheme.
+          </p>
+          <p>share/ → Share site link.</p>
+          <p>hist down/ → Download history </p>
+          <p>
+            share trans/ → Share Tranlation <br />Note: Shares only Current
+            Translation.
+          </p>
+          <p>
+            party/ → Still experimental and under development it turns the
+            background color to a rainbow.<br />Note: It only changes background
+            color so UI might be messy when this feature is used.
+          </p>
+          <p>More features coming soon</p>
+        </details>
+      </div>
+      <div id="info-section" class="details-grid">
+        <details id="Hexinfo">
+          <summary>Hexadecimal</summary>
+          <p>Hexadecimal turns letters and numbers into number pairs.</p>
+          <p>
+            Example: "Hello" becomes "48 65 6C 6C 6F"
+          </p>
+          <p>
+            Hexadecimal outputs your entire text and is case sensitive(outputs text
+            exactly how you type them).
+          </p>
+        </details>
+        <details id="Asciiinfo">
+          <summary>Ascii</summary>
+          <p>Ascii gives every character a number.</p>
+          <p>Example: "Hello" becomes "072 101 108 108 111"</p>
+          <p>
+            Ascii outputs your entire text and is case sensitive(outputs text
+            exactly how you type them).
+          </p>
+        </details>
+        <details id="Binaryinfo">
+          <summary>Binary</summary>
+          <p>Binary reprensents text and numbers as 0's and 1's.</p>
+          <p>
+            Binary outputs your entire string and is case sensitive(outputs text
+            exactly how you type them).
+          </p>
+        </details>
+
+        <details id="Base64info">
+          <summary>Base64</summary>
+          <p>
+            Base64 represents text and numbers as Ascii text format it is case
+            sensitive(outputs text exactly how you type them).
+          </p>
+          <p>
+            Example: "Hello" becomes "SGVsbG8="
+          </p>
+          <p>
+            Ensure that when decoding Base64 the hash should end with an equal to
+            ("=") sign or two for efficiency.
+          </p>
+        </details>
+        <details id="A1Z26info">
+          <summary>A1Z26</summary>
+          <p>A1Z26 gives every letter it position number in the alphabetical order (it reprensents spaces(" ") as 0).
+          </p>
+          <p>
+            Example: "Hello" becomes "8 5 12 12 15"
+          </p>
+          <p>
+            AIZ26 outputs your entire string and is case insensitive(outputs all text
+            to uppercase).
+          </p>
+        </details>
+        <details id="Morseinfo">
+          <summary>Morse</summary>
+          <p>Morse uses dots and dashes to reprensent text and numbers.</p>
+          <p>Example: "Hello" becomes ".... . .-.. .-.. ---"</p>
+          <p>
+            When using our morse translator ensure you do not add punctuations
+            they could lead to errors and the "/" after morse codes signify a
+            word space it is case insensitive(only ouptuts upper case text).
+          </p>
+        </details>
+        <details id="Reverseinfo">
+          <summary>Reverse</summary>
+          <p>Reverse is simply text obfuscation (types text backward and is case sensitive).</p>
+          <p>Example: "Hello" becomes "olleH"</p>
+        </details>
+        <details id="Atbashinfo">
+          <summary>Atbash</summary>
+          <p>Atbash is a substitution cipher it substitutes each letter with it miror (A = Z, B = Y).</p>
+          <p>Example: "Hello" becomes "Svool"</p>
+        </details>
+        <details id="Caesarinfo">
+          <summary>Caesar</summary>
+          <p>
+            Caesar is a substitution cipher it shifts letters by a fixed number down the alphabets or
+            up all depending on the operation set.
+          </p>
+        </details>
+      </div>
+    </section>
+    <section id="achievementsBoard" style="
+           display: none;
+            transform: translate();
+            padding: 20px;
+            border-radius: 10px; 
+          " class="content-section">
+      <div class="more-opt ach">
+        <svg onclick="backhome()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+            <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1"></animate>
+            </path>
+            <!-- Bottom line -->
+            <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1"></animate>
+            </path>
+          </g>
+        </svg>
+        <h1>Achievements</h1>
+      </div>
+      <div class="cont">
+
+        <button id="ref" class="icon-btn" type="button" onclick="showAchievements(); animateSvg(event)">
+          <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow - will spin on click -->
+            <path
+              d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4.01 7.58 4.01 12C4.01 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+      <p id="achlength"></p>
+      <div id="achievementsList"></div>
+    </section>
+
+    <br />
+
+    <section id="statsSection" style="display: none;" class="content-section">
+      <div class="more-opt stats">
+        <svg onclick="backhome()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+            <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1"></animate>
+            </path>
+            <!-- Bottom line -->
+            <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1"></animate>
+            </path>
+          </g>
+        </svg>
+        <h1>Stats</h1>
+      </div>
+      <div class="cont">
+        <button id="ref" type="button" onclick="refreshStats(); animateSvg(event)" class="icon-btn" title="Refresh">
+          <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow - will spin on click -->
+            <path class="refresh-arrow"
+              d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4.01 7.58 4.01 12C4.01 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+
+      </div>
+      <div id="statsContent">
+        <p>
+          <strong>Total Translations:</strong>
+          <span id="totalTranslations">0</span>
+        </p>
+        <br>
+        <p>
+          <strong>Total Characters:</strong>
+          <span id="totalCharacters">0</span>
+        </p>
+        <br>
+
+        <p>
+          <strong>Average Characters:</strong>
+          <span id="avglength">Never</span>
+        </p>
+        <br>
+
+        <p>
+          <strong>Most Used Cipher:</strong>
+          <span id="topCipher">None</span>
+        </p>
+        <br>
+
+        <p>
+          <strong>Last Translation:</strong>
+          <span id="lastTranslation">Never</span>
+        </p>
+        <br>
+
+        <p>
+          <strong>First Translation:</strong>
+          <span id="firstTranslation">Never</span>
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="ultx-sec" class="content-section" style="display: none;">
+      <form>
+
+        <div class="cont4">
+          <input id="superencode" type="radio" name="super" value="Super Encode">
+          <label for="superencode">
+            Super Encode
+          </label>
+          <br>
+          <input id="superdecode" type="radio" name="super" value="Super Decode">
+          <label for="superdecode">Super Decode</label>
+          <br>
+          <div id="superkeyblock" style="display: none;">
+            <br>
+            <label for="decodekey">Decode key:</label><br><br>
+            <input class="keys" type="text" id="decodekey" placeholder="Enter decode key" style="width: auto;">
+          </div>
+          <br>
+          <p id="keyDisplay">Encode Key: [Generated Here]</p>
+          <br>
+          <p class="tracker"></p>
+
+
+          <br>
+          <div style="position: relative;">
+
+            <textarea id="inputText" class="input-area"
+              placeholder="Enter text to encode or a cipher to decode..."></textarea>
+
+            <svg class="three-dots" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg" onclick="event.stopPropagation(); toggleMenu(3)">
+              <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+            </svg>
+            <div class="menu-options" id="menu-3">
+              <button type="button" id="stt2" class="voice-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <path d="M12 19v4" />
+                  <path d="M8 23h8" />
+                </svg>
+
+                <span>Voice Typing</span></button>
+              <button onclick="ultxclear()" type="button" class="delete-btn">
+
+                <svg id="" onclick="" class="delete-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+                <span>Clear</span>
+              </button>
+            </div>
+
+          </div>
+          <div style="position: relative;">
+
+            <textarea id="outputText" class="output" placeholder="Result will appear here..." readonly
+              style="position: relative;"></textarea>
+            <svg class="three-dots" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg" onclick="event.stopPropagation(); toggleMenu(4)">
+              <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+            </svg>
+            <div class="menu-options" id="menu-4">
+              <button type="button" id="cpybtn2" class="copy-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                </svg>
+                <span>Copy Result</span></button>
+              <button onclick="testVoice2()" type="button" class="tts-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                </svg>
+                <span>Text to speech</span></button>
+            </div>
+
+          </div>
+          <br>
+          <div class="steps" id="encodingSteps">
+            <pre id="stepsLog">Encoding/Decoding Process Feedback</pre>
+          </div>
+          <div id="linkblock" class="history-item"
+            style="position: relative; overflow-wrap: break-word; word-break:break-word; word-wrap: break-word; display: ; position:relative;">
+
+            <svg class="three-dots" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg" onclick="event.stopPropagation(); toggleMenu(5)">
+              <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+            </svg>
+            <div class="menu-options" id="menu-5">
+              <button type="button" id="cpybtn3" class="copy-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                </svg>
+                <span>
+
+                  Copy URL
+                </span>
+              </button>
+              <button onclick="testShareLink()" type="button" class="test-btn">
+                <svg class="test-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" class="test-link-chain" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" class="test-link-chain" />
+                  <!-- <path d="M14 7l5 5m0 0l-5 5m5-5H3" class="test-link-arrow"/>  -->
+                </svg>
+
+                <span>
+                  Test URL
+
+                </span>
+              </button>
+              <button onclick="shareMessageLink()" type="button" class="share-btn"> <svg width="25" height="25"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+                </svg>
+                <span>Share URL</span>
+              </button>
+            </div>
+
+
+            <p id="shareLinkDisplay" style="">Link for Sharing Encoded message</p>
+          </div>
+          <button id="resetultx" type="reset" onclick="ultxclear2()" class="icon-btn">
+            <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- Circular arrow - will spin on click -->
+              <path
+                d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4.01 7.58 4.01 12C4.01 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+                fill="currentColor" />
+            </svg></button>
+          <div class="whatsapp-cont">
+            <button class="whatsapp2" type="button">
+
+              <img onclick="openwhatsapp()" src="whatsapp.png" class="whatsapp" />
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section id="historySection" style="
+              display: none;
+              margin-left: 15px;
+      " class="content-section">
+      <div class="more-opt history">
+        <svg onclick="backhome()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+            <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+            <!-- Bottom line -->
+            <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+          </g>
+        </svg>
+        <h1>History</h1>
+      </div>
+      <div class="cont">
+
+        <button id="del" type="button" onclick="clearHistory(); animateSvg(event)" class="icon-btn">
+          <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Trash can -->
+            <path class="trash-can"
+              d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
+              fill="currentColor" />
+            <!-- "X" mark that appears on hover -->
+            <path class="trash-x" d="M15 9L17 11M17 9L15 11M9 9H9.01M15 15H9" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" style="opacity: 0" />
+          </svg>
+        </button>
+        <button id="ref" class="icon-btn" type="button" onclick="showHistory(); animateSvg(event)">
+          <svg class="round" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow - will spin on click -->
+            <path
+              d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4.01 7.58 4.01 12C4.01 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+
+      </div>
+      <p id="length"></p>
+      <div id="historyList" style="display: ; justify-content: ; align-items: ; text-align: ;"></div>
+
+    </section>
+    <section id="info-sec" class="content-section" style="display: none;">
+      <button onclick="" class="more-opt profile">
+        <svg onclick="backhome()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+            <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+            <!-- Bottom line -->
+            <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+          </g>
+        </svg>
+        <h1 class="head-nav">Profile</h1>
+      </button>
+      <div style="position: relative; display: flex; justify-content: center; align-items: center; ">
+        <div id="pic-cont" style="display: ; position: relative;">
+
+          <img id="preview" class="preview" src="#" alt="Your profile picture">
+          <div id="imageZoomOverlay">
+            <img id="zoomedImage" src="" alt="Zoomed Profile">
+          </div>
+          <label class="cam-btn" for="avatar">
+            <svg class="cam" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Camera Body -->
+              <rect x="4" y="7" width="16" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+
+              <!-- Camera Lens -->
+              <circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+
+              <!-- Lens Center -->
+              <circle cx="12" cy="13" r="1" fill="currentColor" />
+
+              <!-- Camera Top -->
+              <rect x="9" y="5" width="6" height="2" rx="1" fill="currentColor" />
+
+              <!-- Flash -->
+              <rect x="17" y="8" width="2" height="2" rx="1" fill="currentColor" />
+            </svg>
+          </label>
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/svg+xml">
+        </div>
+        <div class="user-icon" id="user-icon" style="display: ;">
+          <span class="user-avatar" style="">U</span>
+          <label class="cam-btn1" for="avatar">
+            <svg class="cam" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Camera Body -->
+              <rect x="4" y="7" width="16" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+
+              <!-- Camera Lens -->
+              <circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+
+              <!-- Lens Center -->
+              <circle cx="12" cy="13" r="1" fill="currentColor" />
+
+              <!-- Camera Top -->
+              <rect x="9" y="5" width="6" height="2" rx="1" fill="currentColor" />
+
+              <!-- Flash -->
+              <rect x="17" y="8" width="2" height="2" rx="1" fill="currentColor" />
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div class="switch">
+        <p>Name:</p>
+        <p id="nameDisplay">User</p>
+        <button onclick="editName()" class="edit-icon">
+          <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.3333 2.00004C11.5083 1.82508 11.7162 1.68704 11.9448 1.59338C12.1734 1.49972 12.4184 1.45215 12.6656 1.45326C12.9128 1.45437 13.1574 1.50414 13.3851 1.59967C13.6128 1.69521 13.8192 1.83474 13.9923 2.01076C14.1653 2.18679 14.3016 2.39577 14.3931 2.62537C14.4846 2.85497 14.5295 3.10067 14.5251 3.34787C14.5208 3.59507 14.4673 3.83904 14.3679 4.0655C14.2685 4.29196 14.1251 4.49633 13.946 4.66671L6.47933 12.1334L2.666 13.3334L3.866 9.52004L11.3333 2.00004Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Default fallback -->
+      <div class="more-opt-grid">
+        <div class="mob-datasect">
+
+          <button id="historyToggle" onclick="toggleHistory()" class="more-opt history">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+              <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <span>History</span>
+            <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Both lines animate together smoothly -->
+              <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+                <!-- Left line -->
+                <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+                <!-- Right line -->
+                <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+              </g>
+            </svg>
+          </button>
+          <button type="button" onclick="toggleach()" class="more-opt ach">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+              <path fill="currentColor"
+                d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" />
+            </svg>
+            <span>Achievements</span>
+            <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Both lines animate together smoothly -->
+              <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+                <!-- Left line -->
+                <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+                <!-- Right line -->
+                <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+              </g>
+            </svg>
+
+          </button>
+          <button id="statsToggle" onclick="toggleStats()" class="more-opt stats" type="button">
+
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Chart bars -->
+              <rect x="3" y="13" width="4" height="7" />
+              <!-- Short bar -->
+              <rect x="9" y="8" width="4" height="12" />
+              <!-- Medium bar -->
+              <rect x="15" y="4" width="4" height="16" />
+              <!-- Tall bar -->
+            </svg>
+            <span>Statistics</span>
+            <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Both lines animate together smoothly -->
+              <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+                <!-- Left line -->
+                <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+                <!-- Right line -->
+                <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                  <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+                </path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <button class="more-opt settings" onclick="settings()">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+            <path fill="currentColor"
+              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .43-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+          </svg> <span>
+
+            Settings
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt share" onclick="shareopt()">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+
+          <span>
+            Share
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt info" onclick="about()" id="infotoggle">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z" />
+          </svg>
+          <span>
+            About
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt support" onclick="feedback()" id="feedtoggle">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"
+              fill="currentColor" />
+          </svg>
+          <span>
+            Feedback/Support
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+
+    <section class="content-section" id="share-tab">
+      <div class="infosec">
+
+        <button onclick="" class="more-opt share">
+
+
+
+
+          <svg onclick="back()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Top line -->
+              <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Bottom line -->
+              <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+          <h1 class="head-nav">Share Options</h1>
+        </button>
+        <button class="more-opt" onclick="sharesite()">
+
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          <span>
+            Share Site
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt" onclick="shareAchievements()">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          <span>
+            Share Achievements
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt" onclick="shareHistoryAsText()">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          <span>
+            Share History(Text)
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt" onclick="shareHistoryAsFile()">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          <span>
+            Share History(File)
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button class="more-opt" onclick="downloadHistoryAsTXT()">
+
+          <svg class="download-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" class="download-path" />
+            <polyline points="7,10 12,15 17,10" class="download-arrow" />
+            <line x1="12" y1="15" x2="12" y2="3" class="download-line" />
+          </svg>
+
+          <span>
+            Download History
+          </span>
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+
+
+    <section class="content-section" id="setting-tab">
+      <button onclick="" class="more-opt settings">
+        <svg onclick="back()" width="95" height="55" viewBox="0 0 120 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+            <!-- Top line -->
+            <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+            <!-- Bottom line -->
+            <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+              <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+            </path>
+          </g>
+        </svg>
+        <h1 class="head-nav">Settings</h1>
+      </button>
+      <div class="settings-container">
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">Auto-Detect Cipher</span>
+
+
+            <span id="autodetinfo" class="setting-desc">
+              When typing without selecting a cipher option the selected cipher from above would be used to encode or
+              decode
+              text automatically until a cipher option is selected
+            </span>
+            <details id="autodetciphers" class="setting-desc">
+              <summary id="autodettit">Auto detect</summary>
+              <input type="radio" id="autohex" name="autotranslator" value="Hexadecimal" />
+              <label for="autohex" class="">Hexadecimal</label><br />
+              <input type="radio" id="autoasci" name="autotranslator" value="Ascii" />
+              <label for="autoasci" class="">Ascii</label><br />
+              <input type="radio" id="autobinary" name="autotranslator" value="Binary" />
+              <label for="autobinary">Binary</label><br />
+              <input type="radio" id="autobase64" name="autotranslator" value="Base64" />
+              <label for="autobase64">Base64</label><br />
+              <input type="radio" id="automorse" name="autotranslator" value="Morse" />
+              <label for="automorse" class="">Morse</label><br />
+              <input type="radio" id="autoa1z26" name="autotranslator" value="A1Z26" />
+              <label for="autoa1z26" class="">A1Z26</label><br />
+              <input type="radio" id="autoreverse" name="autotranslator" value="Reverse" />
+              <label for="autoreverse">Reverse </label><br>
+              <input type="radio" id="autoatbash" name="autotranslator" value="Atbash" />
+              <label for="autoatbash">Atbash</label>
+            </details>
+
+          </div>
+          <label class="cyber-toggle danger">
+            <input type="checkbox" id="autoDetectToggle" name="toggle">
+            <span class="toggle-slider"></span>
+          </label><br>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">Auto Save App State</span>
+            <span class="setting-desc">Your app state(data before you leave the app) will be
+              restored on next visit</span>
+
+          </div>
+          <label class="cyber-toggle">
+            <input type="checkbox" id="remember" name="toggle">
+            <span class="toggle-slider"></span>
+
+          </label>
+
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">Personalized Loader</span>
+            <span class="setting-desc">Loader will contain some content of user
+              data!
+
+            </span>
+            <span class="setting-desc">Notice: This feature greatly increases loader time to
+              approximately 45 seconds</span>
+
+          </div>
+          <label class="cyber-toggle">
+            <input type="checkbox" id="personalload">
+            <span class="toggle-slider"></span>
+
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">Dark Mode</span>
+            <span class="setting-desc">Use dark theme across the app</span>
+
+          </div>
+          <label class="cyber-toggle">
+            <input type="checkbox" id="nightmode">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+
+            <span class="setting-title">
+              Pin
+              <span id="pinDisplay">
+
+                dXt@1111
+              </span>
+            </span>
+            <div class="">
+              <span class="setting-desc">Sharing encoded links require a pin by default it is dXt@1111 if at default
+                messages are opened automatically but when you change it a prompt comes up for pin each time your link
+                is opened</span>
+            </div>
+
+          </div>
+          <button onclick="collectPin()" class="edit-icon">
+            <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.3333 2.00004C11.5083 1.82508 11.7162 1.68704 11.9448 1.59338C12.1734 1.49972 12.4184 1.45215 12.6656 1.45326C12.9128 1.45437 13.1574 1.50414 13.3851 1.59967C13.6128 1.69521 13.8192 1.83474 13.9923 2.01076C14.1653 2.18679 14.3016 2.39577 14.3931 2.62537C14.4846 2.85497 14.5295 3.10067 14.5251 3.34787C14.5208 3.59507 14.4673 3.83904 14.3679 4.0655C14.2685 4.29196 14.1251 4.49633 13.946 4.66671L6.47933 12.1334L2.666 13.3334L3.866 9.52004L11.3333 2.00004Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">Pin Sharing</span>
+            <span class="setting-desc">Include pin in message when sharing ULTX encryption(only active when pin is not
+              at default ("dXt@1111")) </span>
+
+          </div>
+          <label class="cyber-toggle">
+            <input type="checkbox" id="pintoggle" name="toggle">
+            <span class="toggle-slider"></span>
+
+          </label>
+
+        </div>
+        <div class="setting-item">
+          <button class="reset-opt" onclick="clearHistory()">Clear History</button>
+          <button class="reset-opt" onclick="removeicon()">Remove Profile icon</button>
+          <button class="reset-opt" onclick="resetUser()">Factory reset</button>
+
+
+          </label>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+  <section class="content-section" id="about-tab">
+    <button onclick="" class="more-opt info">
+      <svg onclick="back()" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+          <!-- Top line -->
+          <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+            <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+              repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+          </path>
+          <!-- Bottom line -->
+          <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+            <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+              repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+          </path>
+        </g>
+      </svg>
+      <h1 class="head-nav">About</h1>
+    </button>
+
+    <br>
+    <p>CipherX • 1.3 • November 2025 </p>
+    <div
+      style="background: rgba(255, 50, 50, 0.1); border-left: 4px solid #ff3333; padding: 15px; margin: 20px 0; border-radius: 4px;">
+      <h4 style="color: #ff3333; margin-top: 0;">⚠️ Important Security Notice</h4>
+      <p style="margin: 0; color: #ff5555; font-size: 0.95em;">
+        <strong>CipherX provides text obfuscation, not military-grade encryption.</strong><br>
+        • Do not use for highly sensitive data (passwords, financial info)<br>
+        • Messages are processed in your browser - no server storage<br>
+        <em>Think of it as a digital envelope, not a bank vault.</em>
+      </p>
+    </div>
+    <br>
+    <div style="">
+      <a href="getting-started.html">
+        <p>For more details visit the how to use page</p>
+      </a>
+      <br>
+      <h1>CIPHERX: Advanced Encryption & Security Platform
+      </h1>
+      <p>Engineered for speed, security, and simplicity. Developed by DaxTech.</p>
+
+      <details open>
+        <summary style="font-size: 1.4em; font-weight: bold; color:; padding: 10px 0; cursor: pointer;">
+          Core Utilities & Live Experience
+        </summary>
+        <div style="padding: 10px 10px 0 10px;">
+          <p>The engine of CipherX, designed for maximum speed and instant feedback.</p>
+
+          <details>
+            <summary style="font-weight: bold;">Live Output as You Type</summary>
+            <p style="margin-left: 20px;">See your translation results instantly as you type. This provides immediate
+              feedback and zero waiting time. Requires a cipher option to be selected or Auto Assume enabled.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Auto Detection</summary>
+            <p style="margin-left: 20px;">CipherX intelligently determines if your input is intended for encoding or
+              decoding, significantly improving user experience and saving time.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Ciphers</summary>
+            <p style="margin-left: 20px;">Access to 10+ basic ciphers. Select your desired cipher option from the home
+              page and begin typing.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Text to Speech</summary>
+            <p style="margin-left: 20px;">Hear your translated message spoken aloud for verification or accessibility.
+            </p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Voice Typing(Experimental)</summary>
+            <p style="margin-left: 20px;">Hands-free mode for input. Type without physically typing. <em>(Under
+                Development)</em></p>
+          </details>
+        </div>
+      </details>
+
+      <br>
+
+      <details>
+        <summary style=" font-weight: bolder; cursor: pointer; white-space: ;">
+          UltX Mode: The Ultimate Security Layer
+        </summary>
+        <div style="padding: 10px 10px 0 10px;">
+          <p>A proprietary cipher developed by DAXTECH. Text is encoded using a random sequence of ciphers, generating a
+            unique encryption key.</p>
+
+          <details>
+            <summary style="font-weight: bold;">UltX Security</summary>
+            <p style="margin-left: 20px;">Your original message can only be viewed by recipients who possess both the
+              key and the encoded message, and are using CipherX.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Auto-Decryption Link</summary>
+            <p style="margin-left: 20px;">Links are generated 2-3 secs after typing <br>When a link is shared, CipherX
+              auto-fills the UltX form and instantly decodes
+              the message upon opening.</p>
+            <p style="margin-left: 20px;">Ensure you have a stable internet connection </p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Manual Super Decode</summary>
+            <p style="margin-left: 20px;">Allows manual input of an encoded message and its unique encryption key.
+              <em>(P.S.: Ensure you select your mode in the UltX forms for improved efficiency.)</em>
+            </p>
+          </details>
+        </div>
+      </details>
+
+      <br>
+
+      <details>
+        <summary style="font-weight: bolder; cursor: pointer;">
+          App Management & Engagement
+        </summary>
+        <div style="padding: 10px 10px 0 10px;">
+          <p>Tools and features designed to make tracking, engaging, and sharing your activity seamless.</p>
+          <details>
+            <summary style="font-weight: bold;">History</summary>
+            <p style="margin-left: 20px;">Saves translation details (time, cipher type, operation, input, output).
+              Auto-Save Trigger: History is saved when you switch cipher options or stop typing for 2-4 seconds.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Stats</summary>
+            <p style="margin-left: 20px;">Data analyzed from your history to generate safe conclusions about your
+              translation activity and habits.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Achievements</summary>
+            <p style="margin-left: 20px;">Keep translating to earn achievements and make the experience fun!</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bolder;">Easter Egg Reward</summary>
+            <p style="margin-left: 20px;">Unlock: Translate 15 times. Activation: Type <code>reward/</code> to reveal
+              the secret instructions. <em>(A small green dot will appear on the homepage upon activation.)</em></p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Sharing</summary>
+            <p style="margin-left: 20px;">Find multiple options available for sharing your output data, such as as a
+              file or as plain text.</p>
+          </details>
+        </div>
+      </details>
+
+      <br>
+
+      <details>
+        <summary style="font-weight: bolder; cursor: pointer;">
+          Settings & Customization
+        </summary>
+        <div style="padding: 10px 10px 0 10px;">
+          <p>Customize your CipherX experience and manage app state.</p>
+
+          <details>
+            <summary style="font-weight: bold;">Default Random Loader</summary>
+            <p style="margin-left: 20px;">CipherX by default loads a random loader each time you enter the app.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Auto Assume</summary>
+            <p style="margin-left: 20px;">Set a preferred default cipher. This cipher will be assumed when you type
+              without selecting an option first. <em>(Under Development)</em></p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Load App State</summary>
+            <p style="margin-left: 20px;">Saves and loads open tabs, last input, output, and selected options whenever
+              you open the app again. <em>(Under Development)</em></p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Personalized Loader</summary>
+            <p style="margin-left: 20px;">Incorporates some of your user data into the loading animation. ⚠️ Warning:
+              This greatly increases loader time.</p>
+          </details>
+
+          <details>
+            <summary style="font-weight: bold;">Auto Detect Network Quality</summary>
+            <p style="margin-left: 20px;">Future feature to optimize performance based on network speed. <em>(TBD)</em>
+            </p>
+          </details>
+        </div>
+      </details>
+
+      <br>
+      <details>
+        <summary style="font-weight: bolder; cursor: pointer;">
+          Pro Tips
+        </summary>
+        <div style="padding: 10px 10px 0 10px;">
+          <p>• Use ULTX for sensitive messages<br>
+            • Ensure you have a stable internet connection to generate links<br>
+            • Links are generated 2-3 seconds after encoding a message<br>
+            • History saves automatically after 2 seconds of not typing<br>
+            • The easter egg unlocks after 15 translations - keep going!<br>
+            • Shared links auto-fill the decoder for your friends</p>
+        </div>
+      </details>
+      <p style="font-size: 0.9em; color: #00cc88; text-align: center;">*Note for Morse, Caesar, Atbash, A1Z26 Cipher:
+        Avoid using punctuations
+        for accurate results.*</p>
+    </div>
+
+  </section>
+  <section class="content-section" id="feedback-tab">
+    <button onclick="" class="more-opt support">
+      <svg onclick="back()" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+          <!-- Top line -->
+          <path d="M50 40L70 25" stroke-dasharray="25" stroke-dashoffset="25">
+            <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+              repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+          </path>
+          <!-- Bottom line -->
+          <path d="M50 40L70 55" stroke-dasharray="25" stroke-dashoffset="25">
+            <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+              repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+          </path>
+        </g>
+      </svg>
+      <h1 class="head-nav">Feedback</h1>
+    </button>
+    <h1 style="text-align: center;">Feedback</h1>
+    <p style="text-align: center;">For feedback and support please fill out the form below</p>
+    <p id="status"></p>
+    <form action="https://formsubmit.co/1c0e7a14c5ae2942c72a2932b8359c15" method="POST" id="contactForm">
+      <label for="firstname" style="letter-spacing: 1.3px;">Firstname <span
+          style="color: red; font-weight: bolder; font-size: 20px;">*</span></label><br /><br />
+      <input type="text" name="firstname" class="send" id="firstname" placeholder="Firstname" required /><br /><br />
+      <label for="lastname" style="letter-spacing: 1.3px;">Lastname <span
+          style="color: red; font-weight: bolder; font-size: 20px;">*</span></label><br /><br />
+      <input type="text" name="lastname" class="send" id="lastname" placeholder="Lastname" required /><br /><br />
+      <label for="email" style="letter-spacing: 1.3px;"> Email <span
+          style="color: red; font-weight: bolder; font-size: 20px;">*</span> </label>
+      <br /><br />
+      <input type="email" name="email" id="email" class="send" placeholder="Email" required /><br /><br />
+      <label for="message"> Your message <span style="color: red; font-weight: bolder; font-size: 20px;">*</span>
+      </label><br />
+      <textarea class="send" name="message" id="message" placeholder="Message" required>
+
+      </textarea><br />
+      <!-- your other form fields go here -->
+      <br>
+      <button type="submit" class="feedback-submit" id="submit">
+        <p>
+          Send
+
+        </p>
+        <span>
+
+          <svg class="go" width="95" height="55" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Both lines animate together smoothly -->
+            <g stroke="CurrentColor" stroke-width="3" stroke-linecap="round">
+              <!-- Left line -->
+              <path d="M70 40L50 55" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+              <!-- Right line -->
+              <path d="M70 40L50 25" stroke-dasharray="25" stroke-dashoffset="25">
+                <animate attributeName="stroke-dashoffset" values="25;0;0;25" keyTimes="0;0.2;0.7;1" dur="2s"
+                  repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+              </path>
+            </g>
+          </svg>
+        </span>
+      </button>
+    </form>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>CipherX</h4>
+            <p style="color: var(--gray);">Your secret message playground. Built with love by daxtech.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Features</h4>
+            <ul class="footer-links">
+              <li><a href="#">Wide variety of Ciphers</a></li>
+              <li><a href="#">Smart History</a></li>
+
+              <li><a href="#">Live Encoding</a></li>
+              <li><a href="#">ULTX Mode</a></li>
+              <li><a href="#">Voice Control</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 CipherX by daxtech. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </section>
+  <div class="cont1">
+
+
+    <div style="position: relative; margin-left: 15px;">
+      <button class="super-btn" onclick="toggleultx()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
+            <animate attributeName="stroke-width" values="2;2.5;2" dur="1.5s" repeatCount="indefinite" />
+          </path>
+        </svg>
+      </button>
+      <span class="super-txt">UltX</span>
+    </div>
+    <div class="mob-section" style="position: relative;">
+
+      <button id="historyToggle" onclick="toggleHistory()" class="hist-btn">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+          <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <span class="hist-txt">History</span>
+
+    </div>
+    <div style="position: relative;">
+
+      <button class="home-btn" onclick="acthome()">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+          <path fill="CurrentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+      </button>
+      <span class="home-txt">Home</span>
+    </div>
+    <div class="mob-section" style="position: relative;">
+      <button id="ach-btn" type="button" onclick="toggleach()" class="ach-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+          <path fill="currentColor"
+            d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" />
+        </svg>
+      </button>
+      <span class="ach-txt">Achievements</span>
+    </div>
+    <div class="mob-section" style="position: relative;">
+      <button id="statsToggle" onclick="toggleStats()" class="stats-btn" type="button">
+
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Chart bars -->
+          <rect x="3" y="13" width="4" height="7" />
+          <!-- Short bar -->
+          <rect x="9" y="8" width="4" height="12" />
+          <!-- Medium bar -->
+          <rect x="15" y="4" width="4" height="16" />
+          <!-- Tall bar -->
+        </svg>
+      </button>
+      <span class="stats-txt">Statistics</span>
+
+    </div>
+    <div style="position: relative; margin-right: 8px;">
+
+      <div id="prev-cont">
+        <img id="preview2" class="preview" src="#" alt="Your profile picture preview" onclick="icon()">
+
+        <span class="img-txt">You</span>
+      </div>
+      <div id="pic-nav" class="user-icon" onclick="icon()">
+        <span class="user-avatar">U</span>
+        <!-- Default fallback -->
+      </div>
+      <div>
+        <span class="you-txt">You</span>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -6053,17 +6053,11 @@ if ('serviceWorker' in navigator) {
 }
 }
 
-// TEST IT - Add this to check if function is called:
-function testNotification() {
-  console.log("🧪 Testing notification...");
-  showNewNotification("Test notification at " + new Date().toLocaleTimeString());
-}
+
 function checkForVibrate() {
       
                if (navigator.vibrate) {
                  navigator.vibrate(100);
-                } else{
-                  console.log(`no vibrate`);
                 }
               }
-              console.log(brated);
+            

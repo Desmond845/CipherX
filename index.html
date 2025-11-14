@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WJFQ8DB381"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WJFQ8DB381");
+    </script>
+
+    <meta charset="UTF-8" />
+    <!-- ENHANCED TITLE - More compelling -->
+    <title>
+      CipherX - Real-time Secret Message Encoder | 10+ Ciphers | AI
+      Auto-Detection | Free Tool
+    </title>
+    <meta
+      name="description"
+      content="Free online/offline cipher tool. Encode/decode messages in Hexadecimal, Base64, Morse, Binary, Caesar, Atbash, A1Z26 & UltraX security mode. No installation needed."
+    />
+    <meta
+      name="google-site-verification"
+      content="jZUs_hxj2fw_o0OvJedz0MaOTvUk5OY2ZSez7es_0PI"
+    />
+    <meta
+      name="keywords"
+      content="cipher, encode messages, decode secret messages, morse code, binary converter, base64, hex converter, caesar cipher, cryptography tool, secret messaging, CipherX, cipherx, cipher tool with ultx, cipher tool with ULTX, cipher tool with UltraX mode, secret messaging tool called CipherX,
+    best cipher tool, free tools, cipher encoder, cipher decoder, UltraX Security, CipherX"
+    />
+    <meta name="author" content="CipherX" />
+    <!-- Favicon fixes -->
+    <link rel="icon" type="image/png" href="ciph.png" />
+    <link rel="apple-touch-icon" href="ciph.png" />
+    <link rel="shortcut icon" href="ciph.png" />
+    <link rel="icon" sizes="192x192" href="ciph.png" />
+    <link rel="icon" sizes="512x512" href="ciph.png" />
+
+    <!-- For newer browsers -->
+    <link rel="icon" type="image/svg+xml" href="ciph.png" />
+    <meta name="theme-color" content="#00f0ff" />
+    <!-- Open Graph tags (for social sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://desmond845.github.io/CipherX/" />
+    <meta
+      property="og:title"
+      content="CipherX - Ultimate Real-time Text Encoder and Decoder with AI auto-detection"
+    />
+    <meta
+      property="og:description"
+      content="Watch messages encode INSTANTLY as you type. With over 10+ ciphers and super mode. No buttons, no waiting - pure cipher magic with AI auto-detection and UltraX security."
+    />
+    <meta property="og:site_name" content="CipherX" />
+    <meta name="application-name" content="CipherX" />
+    <meta
+      property="og:image"
+      content="https://desmond845.github.io/CipherX/ciph.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CipherX - Secret Message Encoder" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CipherX - Secret Message Tool" />
+    <meta
+      name="twitter:description"
+      content="Free online cipher encoder/decoder with 10+ encryption method"
+    />
+    <!-- SUPERCHARGED DESCRIPTION -->
+    <meta
+      name="description"
+      content="🚀 Free online cipher tool with REAL-TIME encoding. No buttons needed - AI automatically detects encode/decode. 10+ ciphers including UltraX military-grade security, voice control, and instant sharing. No installation required."
+    />
+    <!-- Benefit-focused description -->
+    <meta
+      name="description"
+      content="Encode secret messages INSTANTLY as you type - no buttons needed! CipherX AI automatically knows when you're encoding or decoding. Plus voice control, military-grade UltraX security, and 10+ ciphers. FREE online tool."
+    />
+    <!-- ENHANCED KEYWORDS - Focus on your UNIQUE features -->
+    <meta
+      name="keywords"
+      content="real-time cipher, automatic encode decode, AI cipher detection, voice control encryption, UltraX security, secret message generator, instant cipher tool, no button encoding, smart cryptography"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://desmond845.github.io/CipherX/" />
+
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#00f0ff" />
+    <meta name="msapplication-TileColor" content="#00f0ff" />
+    <!-- Important for SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #00f0ff;
+        --primary-dark: #00c2cc;
+        --secondary: #ff6b6b;
+        --dark: #0a192f;
+
+        --darker: #0a192f;
+        --light: #ffffff;
+        --gray: #a0a0b0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", sans-serif, Arial;
+        background: linear-gradient(135deg, var(--darker), var(--dark));
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Navigation */
+      .navbar {
+        padding: 2rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: rgba(10, 25, 47, 0.85);
+        backdrop-filter: blur(4px);
+      }
+
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; visibility: hidden; }
+    }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+      .hero {
+        padding: 12rem 0 6rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 240, 255, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(45deg, var(--light), var(--primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        color: var(--gray);
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-button {
+        background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+        color: var(--darker);
+        padding: 1rem 2.5rem;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 25px 3px rgba(0, 240, 255, 0.4);
+      }
+
+      /* Features Grid */
+      .features {
+        padding: 6rem 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        color: var(--light);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2.5rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(0);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .feature-card.animate-in {
+        opacity: 1;
+        transform: translateX(0) !important;
+      }
+
+      .feature-card[data-animate-direction="left"] {
+        transform: translateX(-100px);
+      }
+
+      .feature-card[data-animate-direction="right"] {
+        transform: translateX(100px);
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+        /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--light);
+      }
+
+      .feature-card p {
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-tag {
+        display: inline-block;
+        background: rgba(255, 107, 107, 0.2);
+        color: var(--secondary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* ULTX Showcase */
+      .ultx-showcase {
+        padding: 6rem 0;
+        background: rgba(0, 240, 255, 0.05);
+        margin: 4rem 0;
+        position: relative;
+      }
+
+      .ultx-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .ultx-badge {
+        background: linear-gradient(45deg, var(--secondary), #ff4757);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+      .ultx-badge.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ultx-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 0.8s ease 0.2s;
+      }
+      .ultx-content h2.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .ultx-features {
+        list-style: none;
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.8s ease 0.4s;
+      }
+      .ultx-features.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .ultx-features li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.6s ease;
+      }
+      .ultx-features.animate-in li {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .ultx-features.animate-in li:nth-child(1) {
+        transition-delay: 0.5s;
+      }
+      .ultx-features.animate-in li:nth-child(2) {
+        transition-delay: 0.6s;
+      }
+      .ultx-features.animate-in li:nth-child(3) {
+        transition-delay: 0.7s;
+      }
+      .ultx-features.animate-in li:nth-child(4) {
+        transition-delay: 0.8s;
+      }
+      .ultx-features li::before {
+        content: "🔒";
+        font-size: 1.2rem;
+      }
+
+      /* Demo Section */
+
+      .demo-box {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 3rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .demo-box.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .demo-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 1rem;
+        color: var(--light);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .demo-input::placeholder {
+        color: var(--gray);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--darker);
+        padding: 4rem 0 2rem;
+        margin-top: 4rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+      .footer-section.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .footer-section:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      .footer-section:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+      .footer-section:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+
+      .footer-section h4 {
+        color: var(--light);
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .footer-links a:hover {
+        color: var(--primary);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--gray);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .ultx-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #particleCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes horrorEffect {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        50% {
+          transform: scale(1.5);
+          opacity: 0.8;
+        }
+
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+
+      @keyframes glitchEffect {
+        0% {
+          transform: translate(0);
+        }
+
+        20% {
+          transform: translate(-3px, 3px);
+        }
+
+        40% {
+          transform: translate(-3px, -3px);
+        }
+
+        60% {
+          transform: translate(3px, 3px);
+        }
+
+        80% {
+          transform: translate(3px, -3px);
+        }
+
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 8px #64ffda;
+        }
+
+        to {
+          text-shadow: 0 0 15px #64ffda, 0 0 25px #64ffda;
+        }
+      }
+
+      body.loading {
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      button {
+        background: #06c4f8;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        height: 50px;
+        border-radius: 5px;
+        margin: 0 auto;
+        min-width: 300px;
+        border: none;
+        cursor: pointer;
+      }
+
+      h2 {
+      }
+
+      .cont {
+      }
+
+      h1 {
+        margin-top: px;
+      }
+
+      button {
+        margin-top: 40px;
+      }
+
+      .cont p {
+        font-weight: bold;
+        padding: ;
+        line-height: 150%;
+      }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CipherX",
+  "description": "Free real-time cipher encoder/decoder with AI auto-detection, 10+ ciphers, ULTX security, voice control, and offline support.",
+  "url": "https://desmond845.github.io/CipherX/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Desmond",
+    "url": "https://desmond845.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DaxTech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://desmond845.github.io/CipherX/ciph.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://desmond845.github.io/CipherX/ciph.png",
+    "width": 1200,
+    "height": 630
+  },
+  "featureList": [
+    "Real-time encoding",
+    "AI auto-detection",
+    "Voice control",
+    "Text-to-speech",
+    "ULTX multi-layer security",
+    "10+ cipher methods",
+    "Offline PWA",
+    "Shareable encrypted links",
+    "Translation history",
+    "Achievements & analytics"
+  ],
+  "browserRequirements": "Requires JavaScript and microphone access for voice features",
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://desmond845.github.io/CipherX/screenshot1.png",
+      "name": "CipherX real-time encoding interface"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+  </head>
+
+  <body>
+    <!-- Add this somewhere visible but not annoying -->
+<div style="display:none;">
+  <h1>CipherX - Free Online Cipher Tool</h1>
+  <h2>Encode and decode secret messages instantly</h2>
+  <p>Hexadecimal, Base64, Morse Code, Binary, Caesar Cipher, Atbash, A1Z26 encryption</p>
+  <p>Real-time text encoding with UltraX military-grade security mode</p>
+</div>
+    <div id="landingpage">
+      <nav class="navbar">
+        <div class="container nav-content">
+          <div class="logo">CipherX</div>
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#ultx">ULTX</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1>Encode Your World</h1>
+          <p>
+            <!-- The ultimate playground for secret messages. Real-time encryption,
+            voice control, and top notch security in one beautiful app. -->
+            A sophisticated web-based encryption application that combines
+            multiple cipher techniques with smart automation and robust user
+            experience features.
+          </p>
+          <button onclick="enterApp()" class="cta-button">
+            Start Encoding →
+          </button>
+          <br />
+          <br />
+          <a href="getting-started.html">
+            <button onclick="" class="cta-button">How to use</button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">Powerful Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔐</div>
+              <h3>10+ Ciphers</h3>
+              <p>
+                Choose from a wide variety of cool ciphers. Pick your favorite.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Live Real-time Encoding</h3>
+              <p>
+                Watch your messages transform instantly as you type. No buttons,
+                no waiting - pure magic.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🤖</div>
+              <h3>Smart Auto-Detection</h3>
+              <p>
+                CipherX intelligently knows when you're encoding or decoding. It
+                just works.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🎤</div>
+              <h3>Voice Control</h3>
+              <p>
+                Speak your messages hands-free. Speech-to-text and
+                text-to-speech built right in.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Smart Analytics</h3>
+              <p>
+                Track your encoding history, unlock achievements, and see your
+                stats grow.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🕓</div>
+              <h3>Smart History</h3>
+              <p>CipherX never forgets your translations.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3>Smart Sharing</h3>
+              <p>
+                Share encoded messages directly to WhatsApp, email, or as secret
+                links.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🕵️</div>
+              <h3>Easter Eggs</h3>
+              <p>
+                Hidden rewards and secret features waiting to be discovered by
+                power users.
+              </p>
+              <span class="feature-tag">Secret</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ULTX Showcase -->
+      <section id="ultx" class="ultx-showcase">
+        <div class="container">
+          <div class="ultx-content">
+            <div>
+              <span class="ultx-badge">MAXIMUM SECURITY</span>
+              <h2>ULTX Mode</h2>
+              <p>
+                Our proprietary multi-layer encryption system that scrambles
+                your messages through random cipher sequences.
+              </p>
+
+              <ul class="ultx-features">
+                <li>Unique encryption keys for each message</li>
+                <li>Auto-decoding smart links</li>
+                <li>Manual super decode option</li>
+                <li>Top notch security layers</li>
+              </ul>
+            </div>
+            <div>
+              <div class="demo-box">
+                <h3>ULTX Secure Message</h3>
+                <p
+                  style="
+                    color: var(--gray);
+                    margin: 1rem 0;
+                    font-family: monospace;
+                  "
+                >
+                  Try Decoding This:
+                </p>
+                <p
+                  style="
+                    color: var(--gray);
+                    margin: 1rem 0;
+                    font-family: monospace;
+                  "
+                >
+                  V2wgbWxnIHVsaXR2ZyBnbCBoc3ppdg==
+                </p>
+                <p style="color: var(--primary); font-size: 0.9rem">
+                  Key: 232RRR
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" id="about">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>CipherX</h4>
+              <p style="color: var(--gray)">
+                Your secret message playground. Built with ❤️ by daxtech.
+              </p>
+            </div>
+            <div class="footer-section">
+              <h4>Features</h4>
+              <ul class="footer-links">
+                <li><a href="#">Wide variety of Ciphers</a></li>
+                <li><a href="#">Smart History</a></li>
+
+                <li><a href="#">Live Encoding</a></li>
+                <li><a href="#">ULTX Mode</a></li>
+                <li><a href="#">Voice Control</a></li>
+                <li><a href="#">Analytics</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Support</h4>
+              <ul class="footer-links">
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>&copy; 2025 CipherX by daxtech. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div
+      onclick="testVoice()"
+      id="cipherLoader"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #0a192f;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: #64ffda;
+        font-family: monospace;
+        overflow: hidden;
+      "
+    >
+      <!-- Spinner -->
+      <div
+        id="loaderSpinner"
+        style="
+          width: 60px;
+          height: 60px;
+          border: 4px solid rgba(100, 255, 218, 0.3);
+          border-top: 4px solid #64ffda;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin-bottom: 30px;
+        "
+      ></div>
+
+      <!-- Text container -->
+      <div
+        id="loaderText"
+        style="font-size: 1.5em; text-align: center; min-height: "
+      ></div>
+      <canvas id="particleCanvas"></canvas>
+      <!-- <button id="speech" onclick="testVoice()" style="display: ;"></button> -->
+    </div>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+            // Stop observing after animation
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements that should animate
+      document.addEventListener("DOMContentLoaded", () => {
+        // Feature cards
+        document.querySelectorAll(".feature-card").forEach((card) => {
+          observer.observe(card);
+        });
+
+        // ULTX section elements
+        const ultxElements = [
+          document.querySelector(".ultx-badge"),
+
+          document.querySelector(".ultx-content h2"),
+          document.querySelector(".ultx-features"),
+          document.querySelector(".ultx-demo-box"),
+        ];
+
+        ultxElements.forEach((el) => {
+          if (el) observer.observe(el);
+        });
+
+        // Demo box
+        const demoBox = document.querySelector(".demo-box");
+        if (demoBox) observer.observe(demoBox);
+
+        // Footer sections
+        document.querySelectorAll(".footer-section").forEach((section) => {
+          observer.observe(section);
+        });
+      });
+
+      // Add some random delay to feature cards for staggered effect
+      document.querySelectorAll(".feature-card").forEach((card, index) => {
+        // card.style.transitionDelay =` ${(index % 3) * 0.1}s`;
+      });
+
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Set canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let cipherIndex = 0;
+
+      // 🎯 PARTICLE SYSTEM (Feature #4)
+      const particles = [];
+      function createParticles() {
+        for (let i = 0; i < 300; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 3 + 1,
+            speedX: Math.random() * 2 - 1,
+            speedY: Math.random() * 2 - 1,
+            color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+          });
+        }
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((particle) => {
+          ctx.fillStyle = particle.color;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+
+          particle.x += particle.speedX;
+          particle.y += particle.speedY;
+
+          if (particle.x < 0 || particle.x > canvas.width)
+            particle.speedX *= -1;
+          if (particle.y < 0 || particle.y > canvas.height)
+            particle.speedY *= -1;
+        });
+        requestAnimationFrame(animateParticles);
+      }
+
+      createParticles();
+      animateParticles();
+
+      function getTimeBasedGreeting() {
+        const hour = new Date().getHours();
+
+        if (hour < 12) return "Good Morning";
+        if (hour < 17) return "Good Afternoon";
+        return "Good Evening";
+      }
+      function format(str) {
+        str = str.charAt(0).toUpperCase() + str.slice(1);
+        return str;
+      }
+      function getLoaderSequence() {
+        const userName = localStorage.getItem("userName");
+        let achievementCount = Object.keys(localStorage).filter((key) =>
+          key.startsWith("achievement_")
+        ).length;
+        achievementCount += Object.keys(localStorage).filter((key) =>
+          key.startsWith("special")
+        ).length;
+        const history =
+          JSON.parse(localStorage.getItem("translationHistory")) || [];
+        const translations = history.length;
+        let savedtheme = localStorage.getItem("theme") || "dark";
+        savedtheme = format(savedtheme);
+        // 🆕 USER - Personalized sequence
+        if (userName) {
+          return [
+            { text: "Loading CipherX...", delay: 1500, effect: "typewriter" },
+            {
+              text: `${getTimeBasedGreeting()}`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            { text: `Loading theme engine`, delay: 1500, effect: "typewriter" },
+            {
+              text: `Restoring last theme style`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: `Restored ${savedtheme} theme`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: `Restoring translation history...`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: `Restored ${translations} translations...`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: `Restoring: Achievement system`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: `Restored: ${achievementCount}/8 completed achievements`,
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: "⚡ Synchronizing cipher databases...",
+              delay: 1500,
+              effect: "typewriter",
+            },
+            {
+              text: "Cipher protocols active✓",
+              delay: 1500,
+              effect: "typewriter",
+            },
+            { text: `System secured`, delay: 1500, effect: "typewriter" },
+            {
+              text: "UNEXPECTED ENCRYPTION ACTIVITY DETECTED",
+              delay: 1500,
+              effect: "horror",
+            },
+            { text: `Welcome back ${userName}!`, delay: 1500, effect: "final" },
+          ];
+        }
+
+        // 🆕 USER - First-time sequence
+        return [
+          {
+            text: "Initializing CipherX...",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: `${getTimeBasedGreeting()}`,
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "Loading: Morse • Binary • Base64 • Caesar • Atbash • Reverse",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "Preparing translation engine...",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "Initializing achievement system...",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "Loading theme engine...",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "Initializing translation history...",
+            delay: 1500,
+            effect: "typewriter",
+          },
+          {
+            text: "UNEXPECTED ENCRYPTION ACTIVITY DETECTED",
+            delay: 1500,
+            effect: "horror",
+          },
+          {
+            text: "System secured. Ready to begin!",
+            delay: 1000,
+            effect: "final",
+          },
+        ];
+      }
+
+      function startEpicLoader() {
+        const loader = document.getElementById("cipherLoader");
+        const textElement = document.getElementById("loaderText");
+        const spinner = document.getElementById("loaderSpinner");
+        loader.style.display = "flex";
+
+        // Sequence of messages with delays
+        const sequence = getLoaderSequence();
+
+        let currentIndex = 0;
+
+        function showNextMessage() {
+          if (currentIndex >= sequence.length) {
+            // End of sequence - hide loader
+            hideLoader();
+            window.location.href = "app.html";
+            return;
+          }
+
+          const { text, delay, effect } = sequence[currentIndex];
+          textElement.innerHTML = "";
+
+          switch (effect) {
+            case "typewriter":
+              typewriterEffect(text, delay);
+              break;
+            case "horror":
+              horrorEffect(text, delay);
+              break;
+            case "final":
+              finalEffect(text, delay);
+              break;
+          }
+
+          currentIndex++;
+        }
+
+        function typewriterEffect(text, delay) {
+          let i = 0;
+          textElement.style.overflow = "hidden";
+          textElement.style.whiteSpace = "nowrap";
+          textElement.style.borderRight = "1px solid #64ffda";
+
+          function type() {
+            if (i < text.length) {
+              textElement.innerHTML += text.charAt(i);
+              i++;
+              setTimeout(type, 50);
+            } else {
+              textElement.style.borderRight = "none";
+              setTimeout(showNextMessage, delay);
+            }
+          }
+          type();
+        }
+
+        function horrorEffect(text, delay) {
+          textElement.innerHTML = text;
+          textElement.style.color = "#ff4757";
+          textElement.style.fontWeight = "bold";
+          textElement.style.animation = "glitchEffect 0.5s infinite";
+
+          // Make spinner red and faster
+          spinner.style.borderTopColor = "#ff4757";
+          spinner.style.animation = "spin 0.3s linear infinite";
+
+          setTimeout(() => {
+            textElement.style.animation = "horrorEffect 1s forwards";
+            spinner.style.animation = "horrorEffect 1s forwards";
+            setTimeout(showNextMessage, 1000);
+          }, delay);
+        }
+
+        function finalEffect(text, delay) {
+          // Reset styles
+          textElement.style.animation = "";
+          textElement.style.color = "#64ffda";
+          spinner.style.animation = "spin 1s linear infinite";
+          spinner.style.borderTopColor = "#64ffda";
+          spinner.style.opacity = "1";
+          spinner.style.transform = "scale(1)";
+          textElement.innerHTML = text;
+
+          setTimeout(() => {
+            hideLoader();
+          }, 5000);
+        }
+        function hideLoader() {
+          loader.style.animation = "fadeOut 1s forwards";
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 1000);
+        }
+
+        // Start the sequence
+        showNextMessage();
+      }
+
+
+      if (
+        localStorage.getItem("userName") &&
+        localStorage.getItem("allowpersonalload") === "true"
+      ) {
+        // Show loader immediately for returning users
+        document.getElementById("landingpage").style.display = "none";
+        startEpicLoader();
+
+        setTimeout(() => {
+          window.location.href = "app.html";
+        }, 40000); // Shorter delay for returning users
+      } else {
+        // document.getElementById("landingpage").style.display = "block";
+      }
+      function enterApp() {
+        // document.getElementById("cipherLoader").style.display = "flex";
+        document.getElementById("landingpage").style.display = "none";
+        document.getElementById("landingpage").style.display = "none";
+
+        // This is exactly right:
+        const randomNum = Math.floor(Math.random() * 3) + 1; // 1, 2, or 3
+
+        switch (randomNum) {
+          case 1:
+            window.location.href = "loader1.html";
+            break;
+          case 2:
+            window.location.href = "loader2.html";
+            break;
+          case 3:
+            window.location.href = "loader3.html";
+            break;
+        }
+        // 1 second delay to show loader
+      }
+      // localStorage.clear()
+      if (
+        localStorage.getItem("userName") &&
+        localStorage.getItem("allowpersonalload") !== "true"
+      ) {
+        document.getElementById("landingpage").style.display = "none";
+
+        // This is exactly right:
+        const randomNum = Math.floor(Math.random() * 3) + 1; // 1, 2, or 3
+
+        switch (randomNum) {
+          case 1:
+            window.location.href = "loader1.html";
+            break;
+          case 2:
+            window.location.href = "loader2.html";
+            break;
+          case 3:
+            window.location.href = "loader3.html";
+            break;
+        }
+      }
+      // GLOBAL VARIABLES
+      let availableVoices = []; // This will hold all voices
+      let defaultVoice = null; // This will hold our chosen voice (Samantha!)
+
+      // This function runs when voices are loaded
+      function findSamantha(voices) {
+        // Look for her by name across different systems
+        return voices.find(
+          (voice) =>
+            voice.name.includes("Samantha") ||
+            voice.name.includes("Google UK English Female") || // Good fallback
+            voice.name.includes("Google US English Female") || // Good fallback
+            voice.name.includes("Microsoft Zira Desktop") // Good fallback
+        );
+      }
+      function loadVoices() {
+        availableVoices = window.speechSynthesis.getVoices();
+
+        // NOW we try to find Samantha
+        defaultVoice = findSamantha(availableVoices);
+
+        if (defaultVoice) {
+        } else {
+          // If we can't find her, the system will use its default anyway
+        }
+      }
+
+      // A dedicated function to find our queen
+
+      // CHECK IF VOICES ARE ALREADY LOADED (e.g., on a button click later)
+      if (window.speechSynthesis.getVoices().length > 0) {
+        loadVoices();
+      }
+      // LISTEN FOR THE EVENT WHEN VOICES ARE LOADED
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+
+      function testVoice() {
+        // Check if browser supports speech
+        if (!("speechSynthesis" in window)) {
+          alert("Speech synthesis not supported in your browser");
+          return;
+        }
+
+        window.speechSynthesis.cancel();
+        // Get the username from localStorage or use default
+        const userName = localStorage.getItem("userName");
+
+        // Create the message
+        const message = userName
+          ? `${getTimeBasedGreeting()} ${userName}, Welcome back`
+          : `${getTimeBasedGreeting()}, Welcome to Cipher X`;
+
+        // Create speech object
+        const utterance = new SpeechSynthesisUtterance(message);
+
+        // 1. FIRST PRIORITY: Use the pre-loaded global defaultVoice (Samantha!)
+        if (defaultVoice) {
+          utterance.voice = defaultVoice;
+        } else {
+          // 2. FALLBACK: Voices haven't loaded via the event yet, try to grab them now.
+          const voices = window.speechSynthesis.getVoices();
+          const fallbackVoice = findSamantha(voices); // Use the same finder function
+
+          if (fallbackVoice) {
+            utterance.voice = fallbackVoice;
+          } else {
+            // 3. LAST RESORT: No Samantha found. Use fun tweaks on the default male voice.
+
+            utterance.rate = 1.1;
+            utterance.pitch = 1.4;
+          }
+        }
+
+        // Apply base properties (these work on any voice)
+        utterance.volume = 1;
+
+        // Speak it!
+        window.speechSynthesis.speak(utterance);
+
+        // Callback when finished
+        utterance.onend = function () {};
+      }
+    </script>
+  </body>
+</html>

@@ -6022,16 +6022,7 @@ async function callNotify(message) {
       // toast.info(message);
       return;
     }
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("SW registered");
-        })
-        .catch((error) => {
-          console.log("SW registration failed");
-        });
-    }
+    
     try {
       const registration = await navigator.serviceWorker.ready;
       console.log("✅ Service worker ready:", registration.active);

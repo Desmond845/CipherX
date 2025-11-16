@@ -1,4 +1,4 @@
-const CACHE = 'cipherx-v1';
+const CACHE = 'cipherx-v2';
 
 self.addEventListener('install', event => {
   event.waitUntil(

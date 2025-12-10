@@ -1,0 +1,22 @@
+{
+  "name": "CipherX",
+  "short_name": "CipherX",
+  "description": "Real-time AI cipher tool with ULTX encryption",
+  "start_url": "/CipherX/",
+  "display": "standalone",
+  "background_color": "#0f0f1f",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "ciph.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

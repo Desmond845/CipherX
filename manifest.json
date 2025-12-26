@@ -1,0 +1,27 @@
+{
+  "name": "CipherX",
+  "short_name": "CipherX",
+  "description": "Real-time cipher translator with ULTX encryption",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0f1f",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "ciph.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "ciph.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}

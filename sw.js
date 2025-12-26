@@ -1,7 +1,7 @@
 // self.addEventListener("install", function (event) {
 //   event.waitUntil(self.skipWaiting()); // ACTIVATE IMMEDIATELY
 // });
-const CACHE = 'growthgrid-v1.4';
+const CACHE = 'growthgrid-v1.4.1';
 
 self.addEventListener('install', e => {
   e.waitUntil(

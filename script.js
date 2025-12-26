@@ -6130,6 +6130,7 @@ document
     const message = document.getElementById("message");
     const status = document.getElementById("status");
 
+const email = document.getElementById("email");  
     // Clean the inputs
     first.value = cleanname(first.value);
     last.value = cleanname(last.value);
@@ -6141,6 +6142,7 @@ document
     formData.append("_captcha", "false");
     formData.append("First Name", first.value);
     formData.append("Last Name", last.value);
+    formData.append("Email", email.value);
     formData.append("Message", message.value);
     formData.append("Time", new Date().toISOString());
     formData.append("URL", window.location.href);
